@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>旅館業 運営管理代行 | 合同会社やどり</title>
-<meta name="description" content="東京の民泊・簡易宿所に特化した旅館業の運営管理代行。手数料10%のライトプランから、英語電話対応つきのフルプランまで3プラン。初期費用1棟目0円。合同会社やどり。">
-<meta property="og:title" content="旅館業 運営管理代行 | 合同会社やどり">
-<meta property="og:description" content="手数料10%〜。掲載・価格・ゲスト対応から、清掃管理・英語電話対応まで。オーナー様の「手放したい範囲」で選べる3プラン。">
+<title>REBUILD 宿泊経営リビルド | 稼働率改善プログラム - 合同会社やどり</title>
+<meta name="description" content="稼働率が上がらない原因は、運営か建物か。その切り分けから始める宿泊経営の立て直しプログラム。無料の稼働率診断、運営代行3プラン（手数料10%〜）、インテリア・内装改装、資金の相談窓口までを一気通貫で。合同会社やどり。">
+<meta property="og:title" content="REBUILD 宿泊経営リビルド | 稼働率改善プログラム">
+<meta property="og:description" content="その稼働率、原因は運営ですか。それとも、建物ですか。切り分けから始める宿泊経営の立て直しプログラム。運営改善・内装改装・資金を窓口ひとつで。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://management.yadori-llc.com/assets/img/tokyo-01.jpg">
 <meta property="og:url" content="https://management.yadori-llc.com/">
-<meta property="og:site_name" content="合同会社やどり｜旅館業 運営管理代行">
+<meta property="og:site_name" content="REBUILD 宿泊経営リビルド｜合同会社やどり">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://management.yadori-llc.com/">
@@ -20,8 +20,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "旅館業 運営管理代行",
-  "serviceType": "宿泊施設の運営管理代行",
+  "name": "REBUILD 宿泊経営リビルド",
+  "alternateName": "宿泊施設 稼働率改善プログラム",
+  "serviceType": "宿泊施設の稼働率改善・運営管理代行・内装改装",
+  "description": "稼働率が上がらない原因が運営にあるのか建物にあるのかを切り分け、運営改善と施設改善の両面から宿泊経営を立て直すプログラム。",
   "areaServed": { "@type": "AdministrativeArea", "name": "東京都" },
   "provider": {
     "@type": "Organization",
@@ -118,8 +120,14 @@ table{border-collapse:collapse;width:100%}
   padding:16px var(--pad);background:rgba(255,255,255,.92);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
 }
-#site-nav .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+#site-nav .logo{display:flex;align-items:center;gap:14px;flex-shrink:0}
 #site-nav .logo img{height:44px;width:auto;display:block}
+#site-nav .logo .wm{
+  display:flex;flex-direction:column;line-height:1.15;
+  padding-left:14px;border-left:1px solid var(--line);
+}
+#site-nav .logo .wm b{font-size:16px;font-weight:900;letter-spacing:.16em;color:var(--green)}
+#site-nav .logo .wm span{font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--ink-mid)}
 .pc-nav{display:flex;align-items:center;gap:24px;margin-left:auto}
 .pc-nav a{font-size:14.5px;font-weight:500;color:var(--ink);white-space:nowrap}
 .pc-nav a:hover{color:var(--green)}
@@ -141,6 +149,7 @@ table{border-collapse:collapse;width:100%}
 .phero h1{font-size:clamp(32px,5vw,64px);font-weight:900;line-height:1.25;margin-top:20px;margin-bottom:28px;letter-spacing:.01em;animation:riseIn .7s ease both}
 .phero h1 .g{color:var(--green)}
 .phero__lead{font-size:clamp(15px,1.4vw,18px);font-weight:500;line-height:2;color:var(--ink-mid);max-width:740px;animation:riseIn .85s ease .1s both}
+.phero__lead b{color:var(--ink);font-weight:700;border-bottom:2px solid var(--tint);padding-bottom:1px}
 .phero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px;animation:riseIn .95s ease .16s both}
 .phero__media{height:clamp(280px,38vw,480px);border-radius:24px;overflow:hidden;margin-top:56px;animation:riseIn 1s ease .22s both}
 .phero__media img{width:100%;height:100%;object-fit:cover}
@@ -149,6 +158,112 @@ table{border-collapse:collapse;width:100%}
 .phero__kpi b{display:block;font-size:40px;font-weight:900;color:var(--green);line-height:1.1}
 .phero__kpi b small{font-size:18px}
 .phero__kpi span{display:block;font-size:13px;font-weight:500;color:var(--ink-mid);margin-top:4px}
+
+/* ═══════════════ SPLIT（原因の切り分け） ═══════════════ */
+.split{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-top:8px}
+.split__col{background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px 34px}
+.split__col:first-child{border-radius:24px 0 0 24px;border-right:none}
+.split__col:last-child{border-radius:0 24px 24px 0;border-left:none}
+.split__vs{
+  display:flex;align-items:center;justify-content:center;
+  width:66px;background:#fff;border-block:1px solid var(--line);
+}
+.split__vs span{
+  font-size:13px;font-weight:900;letter-spacing:.1em;color:var(--ink-soft);
+  writing-mode:vertical-rl;
+}
+.split__tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;padding:7px 16px;border-radius:100px;margin-bottom:16px}
+.split__col--soft .split__tag{background:var(--tint);color:var(--green)}
+.split__col--hard .split__tag{background:var(--ink);color:#fff}
+.split__col h3{font-size:clamp(19px,2.2vw,24px);font-weight:900;line-height:1.5;margin-bottom:18px}
+.split__col ul{display:flex;flex-direction:column;gap:11px}
+.split__col li{font-size:14px;font-weight:400;line-height:1.75;color:var(--ink-mid);padding-left:20px;position:relative}
+.split__col li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.split__col--hard li::before{background:var(--ink)}
+.split__col p{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;font-weight:500;line-height:1.85;color:var(--ink)}
+.split__concl{
+  margin-top:34px;background:var(--ink);color:#fff;border-radius:24px;
+  padding:40px 38px;text-align:center;
+}
+.split__concl p{font-size:clamp(15px,1.7vw,19px);font-weight:500;line-height:1.95;color:#C9D4E0}
+.split__concl b{display:block;font-size:clamp(20px,2.8vw,30px);font-weight:900;line-height:1.55;color:#fff;margin-top:16px}
+.split__concl b em{font-style:normal;color:#8FC77C}
+
+/* ═══════════════ PROGRAM（全体像） ═══════════════ */
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.prog__step{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:34px 30px;display:flex;flex-direction:column;position:relative;
+}
+.prog__step::after{
+  content:"";position:absolute;right:-13px;top:50%;transform:translateY(-50%) rotate(45deg);
+  width:16px;height:16px;background:#fff;
+  border-top:1px solid var(--line);border-right:1px solid var(--line);z-index:2;
+}
+.prog__step:last-child::after{display:none}
+.prog__n{display:block;font-size:12px;font-weight:900;letter-spacing:.16em;color:var(--green);margin-bottom:10px}
+.prog__step h3{font-size:21px;font-weight:900;line-height:1.45;margin-bottom:12px}
+.prog__step > p{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
+.prog__meta{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.prog__meta span{font-size:11.5px;font-weight:700;color:var(--green);background:var(--tint);border-radius:100px;padding:6px 13px}
+.prog__free{background:var(--tint);border-color:transparent}
+.prog__aside{
+  margin-top:18px;background:var(--tint-2);border:1px dashed var(--greige,#CFD8C7);
+  border-radius:24px;padding:28px 32px;
+  display:grid;grid-template-columns:auto 1fr;gap:10px 26px;align-items:center;
+}
+.prog__aside .lbl{
+  grid-row:1/span 2;font-size:12px;font-weight:900;letter-spacing:.14em;color:var(--ink-mid);
+  border-right:1px solid var(--line);padding-right:26px;white-space:nowrap;
+}
+.prog__aside h3{font-size:18px;font-weight:900}
+.prog__aside p{font-size:13.5px;font-weight:400;line-height:1.85;color:var(--ink-mid)}
+
+/* ═══════════════ DIAGNOSIS ═══════════════ */
+.diag{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+.diag__list{display:flex;flex-direction:column;gap:20px}
+.diag__list li{display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start}
+.diag__list .no{
+  width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;
+  display:grid;place-items:center;font-size:14px;font-weight:900;
+}
+.diag__list h3{font-size:17px;font-weight:700;line-height:1.55;margin-bottom:6px}
+.diag__list p{font-size:13.5px;font-weight:400;line-height:1.85;color:var(--ink-mid)}
+.diag__card{background:var(--ink);color:#fff;border-radius:24px;padding:38px 34px}
+.diag__card .eyebrow{color:#8FC77C;margin-bottom:12px}
+.diag__card h3{font-size:clamp(22px,2.6vw,28px);font-weight:900;line-height:1.45;margin-bottom:20px}
+.diag__spec{display:flex;flex-direction:column;gap:0;margin-bottom:24px}
+.diag__spec div{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.diag__spec dt{font-size:12px;font-weight:700;color:#8FC77C;padding-top:2px}
+.diag__spec dd{font-size:13.5px;font-weight:400;line-height:1.7;color:#C9D4E0}
+.diag__card .note{font-size:11.5px;font-weight:400;line-height:1.8;color:#7F8C86;margin-top:16px}
+
+/* ═══════════════ RENOVATION ═══════════════ */
+.reno{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.reno li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 28px}
+.reno h3{font-size:18px;font-weight:900;line-height:1.55;margin-bottom:12px}
+.reno p{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
+.reno p b{color:var(--ink);font-weight:700}
+.reno__scope{
+  margin-top:22px;background:var(--tint);border-radius:24px;padding:32px 34px;
+  display:grid;grid-template-columns:1fr 1fr;gap:22px 40px;
+}
+.reno__scope h3{grid-column:1/-1;font-size:19px;font-weight:900}
+.reno__scope dl dt{font-size:12.5px;font-weight:700;color:var(--green);margin-bottom:6px}
+.reno__scope dl dd{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
+.reno__scope dl dd b{color:var(--ink);font-weight:700}
+
+/* ═══════════════ FINANCE ═══════════════ */
+.fin{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px 38px;
+  display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;
+}
+.fin__head{grid-column:1/-1}
+.fin__head h3{font-size:clamp(20px,2.4vw,26px);font-weight:900;line-height:1.5;margin-bottom:14px}
+.fin__head p{font-size:14.5px;font-weight:400;line-height:1.95;color:var(--ink-mid);max-width:70ch}
+.fin dl dt{font-size:12.5px;font-weight:700;color:var(--green);margin-bottom:6px}
+.fin dl dd{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
+.fin__note{grid-column:1/-1;padding-top:20px;border-top:1px solid var(--line);font-size:12px;font-weight:400;line-height:1.85;color:var(--ink-soft)}
 
 /* ═══════════════ ISSUES ═══════════════ */
 .issues{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
@@ -323,6 +438,7 @@ table{border-collapse:collapse;width:100%}
 .flow .step{font-size:13px;font-weight:900;letter-spacing:.14em;color:var(--green);margin-bottom:12px}
 .flow h3{font-size:18px;font-weight:700;margin-bottom:11px;line-height:1.55}
 .flow p{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
+.flow p b{color:var(--green);font-weight:700}
 .flow .time{margin-top:auto;padding-top:16px;font-size:12px;font-weight:700;color:var(--green)}
 
 /* ═══════════════ FAQ ═══════════════ */
@@ -341,6 +457,7 @@ table{border-collapse:collapse;width:100%}
 /* ═══════════════ CTA ═══════════════ */
 .cta{background:var(--green);color:#fff;padding:110px var(--pad)}
 .cta .inner{max-width:1000px;margin:0 auto;text-align:center}
+.cta__wm{font-size:12px!important;font-weight:900;letter-spacing:.22em;color:rgba(255,255,255,.6)!important;margin-bottom:20px!important}
 .cta h2{font-size:clamp(30px,5vw,60px);font-weight:900;line-height:1.3;margin-bottom:24px;letter-spacing:.01em}
 .cta p{font-size:16px;font-weight:500;line-height:1.95;color:rgba(255,255,255,.9);max-width:620px;margin:0 auto 42px}
 .cta__btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
@@ -382,6 +499,19 @@ table{border-collapse:collapse;width:100%}
   #hamburger-btn{display:flex}
 }
 @media (max-width:1080px){
+  .split{grid-template-columns:1fr}
+  .split__col:first-child{border-radius:24px 24px 0 0;border-right:1px solid var(--line);border-bottom:none}
+  .split__col:last-child{border-radius:0 0 24px 24px;border-left:1px solid var(--line);border-top:none}
+  .split__vs{width:auto;height:52px;border-block:none;border-inline:1px solid var(--line)}
+  .split__vs span{writing-mode:horizontal-tb}
+  .prog{grid-template-columns:1fr}
+  .prog__step::after{
+    right:50%;top:auto;bottom:-13px;
+    transform:translateX(50%) rotate(135deg);
+  }
+  .diag{grid-template-columns:1fr;gap:32px}
+  .reno{grid-template-columns:repeat(2,1fr)}
+  .fin{grid-template-columns:1fr}
   .plans{grid-template-columns:1fr;max-width:620px;margin-inline:auto}
   .sim{grid-template-columns:1fr;gap:32px}
   .why{grid-template-columns:1fr;gap:36px}
@@ -405,6 +535,16 @@ table{border-collapse:collapse;width:100%}
   .phero__kpi li{flex:1 1 100%;padding:18px 22px}
   .phero__kpi b{font-size:34px}
   .issues{grid-template-columns:1fr}
+  .split__col{padding:28px 22px}
+  .split__concl{padding:28px 22px}
+  .prog__step{padding:28px 22px}
+  .prog__aside{grid-template-columns:1fr;gap:12px;padding:24px 22px}
+  .prog__aside .lbl{grid-row:auto;border-right:none;padding-right:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .diag__card{padding:28px 22px}
+  .diag__spec div{grid-template-columns:1fr;gap:3px}
+  .reno{grid-template-columns:1fr}
+  .reno__scope{grid-template-columns:1fr;padding:26px 22px}
+  .fin{padding:28px 22px}
   .rgrid,.rgrid--3{grid-template-columns:repeat(2,1fr);gap:24px 16px}
   .plan{padding:36px 22px 28px}
   .plan--reco{padding-top:46px}
@@ -435,15 +575,19 @@ table{border-collapse:collapse;width:100%}
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav id="site-nav">
-  <a href="https://yadori-llc.com/" class="logo"><img src="assets/brand/logo-nav.png" alt="yadori"></a>
+  <a href="#top" class="logo">
+    <img src="assets/brand/logo-nav.png" alt="yadori">
+    <span class="wm"><b>REBUILD</b><span>宿泊経営リビルド</span></span>
+  </a>
   <div class="pc-nav">
-    <a href="#plans">料金プラン</a>
-    <a href="#compare">業務範囲</a>
-    <a href="#simulator">収益シミュレーション</a>
+    <a href="#program">プログラム</a>
+    <a href="#diagnosis">稼働率診断</a>
+    <a href="#plans">運営プラン</a>
+    <a href="#renovation">施設改善</a>
     <a href="#works">実績</a>
-    <a href="#faq">よくあるご質問</a>
+    <a href="#faq">FAQ</a>
     <a href="https://yadori-llc.com/" class="nav-corp">運営会社 <span aria-hidden="true">↗</span></a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--green btn--sm">無料相談</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--green btn--sm">無料稼働率診断</a>
   </div>
   <button id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -452,9 +596,12 @@ table{border-collapse:collapse;width:100%}
 
 <div id="mobile-menu">
   <div id="menu-panel">
-    <a href="#plans">料金プラン</a>
-    <a href="#compare">業務範囲</a>
-    <a href="#options">オプション</a>
+    <a href="#program">プログラム全体像</a>
+    <a href="#diagnosis">STEP 1 稼働率診断</a>
+    <a href="#plans">STEP 2 運営改善</a>
+    <a href="#renovation">STEP 3 施設改善</a>
+    <a href="#finance">資金のご相談</a>
+    <a href="#compare">業務範囲の比較</a>
     <a href="#simulator">収益シミュレーション</a>
     <a href="#works">実績</a>
     <a href="#flow">導入の流れ</a>
@@ -466,18 +613,19 @@ table{border-collapse:collapse;width:100%}
 
 <!-- ═══════════ HERO ═══════════ -->
 <header class="phero" id="top">
-  <p class="crumb"><a href="https://yadori-llc.com/">合同会社やどり</a> ／ 旅館業 運営管理代行</p>
-  <span class="eyebrow">LODGING MANAGEMENT</span>
-  <h1>オーナー様の手を離れても、<br><span class="g">稼働率は落ちない。</span></h1>
+  <p class="crumb"><a href="https://yadori-llc.com/">合同会社やどり</a> ／ REBUILD 宿泊経営リビルド</p>
+  <span class="eyebrow">REBUILD ─ 宿泊経営リビルド</span>
+  <h1>その稼働率、原因は<br><span class="g">運営ですか。それとも、建物ですか。</span></h1>
   <p class="phero__lead">
-    東京の民泊・簡易宿所に特化した、旅館業の運営管理代行サービスです。
-    許認可の取得から運営設計まで現場で積み上げてきた知見をもとに、
-    掲載・価格・ゲスト対応から清掃管理・英語での電話対応まで。
-    「どこまで手放したいか」で選べる3つのプランをご用意しました。
+    稼働率が上がらない理由は、価格設定や掲載文にあることもあれば、
+    間取りや内装そのものにあることもあります。
+    REBUILD は、その<b>切り分け</b>から始める宿泊経営の立て直しプログラムです。
+    運営代行、インテリア・内装改装、そして資金。
+    窓口をひとつにまとめて、やどりが一気通貫でお引き受けします。
   </p>
   <div class="phero__cta">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--green">無料で運営診断を申し込む <span>→</span></a>
-    <a href="#plans" class="btn btn--outline">3つの料金プランを見る</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--green">無料で稼働率診断を申し込む <span>→</span></a>
+    <a href="#program" class="btn btn--outline">プログラムの全体像を見る</a>
   </div>
   <div class="phero__media">
     <img src="assets/img/tokyo-01.jpg" alt="東京都内で運営する宿泊施設のリビングダイニング" fetchpriority="high">
@@ -490,22 +638,166 @@ table{border-collapse:collapse;width:100%}
   </ul>
 </header>
 
+<!-- ═══════════ SPLIT ─ 原因の切り分け ═══════════ -->
+<section class="sec sec--tint" id="split">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">THE REAL QUESTION</span>
+      <h2 class="h2">原因を切り分けないまま、<br>手を打っていませんか。</h2>
+      <p class="lead">稼働率が動かないとき、犯人は必ずどちらかにいます。運営（ソフト）か、建物（ハード）か。ここを取り違えると、価格を下げても写真を撮り直しても数字は変わりません。</p>
+    </div>
+
+    <div class="split">
+      <div class="split__col split__col--soft">
+        <span class="split__tag">CASE A ─ 運営が原因</span>
+        <h3>建物は悪くないのに、<br>埋まっていない</h3>
+        <ul>
+          <li>周辺の需給に対して価格が固定されたまま</li>
+          <li>掲載文と写真の順序が検索に最適化されていない</li>
+          <li>返信の遅れでレビュー評価と検索順位が落ちている</li>
+          <li>Airbnb1媒体のみで、露出の母数が足りていない</li>
+        </ul>
+        <p>→ 運営改善（STEP 2）だけで数字が戻るケース。改装費はかかりません。</p>
+      </div>
+
+      <div class="split__vs"><span>OR</span></div>
+
+      <div class="split__col split__col--hard">
+        <span class="split__tag">CASE B ─ 建物が原因</span>
+        <h3>運営を尽くしても、<br>単価が上がらない</h3>
+        <ul>
+          <li>写真で「行きたい」と思わせる一枚がつくれない</li>
+          <li>定員・間取りが狙うべき客層と噛み合っていない</li>
+          <li>競合が導入した設備（サウナ・ワークスペース等）に見劣り</li>
+          <li>水回りや内装の古さがレビューで直接指摘されている</li>
+        </ul>
+        <p>→ 施設改善（STEP 3）が必要なケース。運営だけを頑張っても頭打ちになります。</p>
+      </div>
+    </div>
+
+    <div class="split__concl">
+      <p>運営代行会社は運営しか見ません。内装会社は建物しか見ません。<br>どちらが原因かを切り分けないまま手を打つから、稼働率が動かない。</p>
+      <b>やどりは、<em>両方を診て、両方を直せます。</em></b>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROGRAM ─ 全体像 ═══════════ -->
+<section class="sec" id="program">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">PROGRAM</span>
+      <h2 class="h2">REBUILD の3ステップ</h2>
+      <p class="lead">診断から始め、必要な打ち手だけを順に実行します。<b>いきなり改装を提案することはありません。</b>運営で戻るなら、そのほうが早くて安いからです。</p>
+    </div>
+
+    <div class="prog">
+      <article class="prog__step prog__free">
+        <span class="prog__n">STEP 01</span>
+        <h3>稼働率診断</h3>
+        <p>現況の数字と競合を突き合わせ、原因が運営にあるのか建物にあるのかを切り分けます。改善余地の試算まで含めて、ここは無料です。</p>
+        <div class="prog__meta"><span>無料</span><span>オンライン30分</span><span>レポート3営業日</span></div>
+      </article>
+
+      <article class="prog__step">
+        <span class="prog__n">STEP 02</span>
+        <h3>運営改善</h3>
+        <p>掲載・価格・ゲスト対応・清掃管理を引き受けます。手放したい範囲に応じて3プランから。売上が立たない月に手数料は発生しません。</p>
+        <div class="prog__meta"><span>手数料 10%〜</span><span>初期費用0円</span><span>最短2週間</span></div>
+      </article>
+
+      <article class="prog__step">
+        <span class="prog__n">STEP 03</span>
+        <h3>施設改善</h3>
+        <p>運営だけでは届かないとき、インテリアと内装に踏み込みます。投資回収の試算を先に出し、納得いただいてから着手します。</p>
+        <div class="prog__meta"><span>個別お見積り</span><span>回収試算つき</span></div>
+      </article>
+    </div>
+
+    <div class="prog__aside">
+      <span class="lbl">資金</span>
+      <h3>改装資金のご相談は、提携パートナーへおつなぎします</h3>
+      <p>施設改善に資金が必要な場合、金融面に明るい提携パートナーをご紹介します。やどり自身が融資や資金調達を行うものではありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STEP 1 ─ 稼働率診断 ═══════════ -->
+<section class="sec sec--tint" id="diagnosis">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">STEP 01 ─ DIAGNOSIS</span>
+      <h2 class="h2">まず、無料の<br>稼働率診断から。</h2>
+      <p class="lead">契約前提のヒアリングではありません。伸びしろが無ければ「今のままで問題ありません」とお伝えします。</p>
+    </div>
+
+    <div class="diag">
+      <ul class="diag__list">
+        <li>
+          <span class="no">1</span>
+          <div>
+            <h3>現況の棚卸し</h3>
+            <p>稼働率・ADR・RevPAR・レビュー評価・掲載写真・価格設定・ハウスルールを拝見します。管理画面のスクリーンショットで足ります。</p>
+          </div>
+        </li>
+        <li>
+          <span class="no">2</span>
+          <div>
+            <h3>競合3〜5件のベンチマーク</h3>
+            <p>同一エリア・同一規模の施設と、価格帯・稼働・設備・写真の見え方を並べて比較します。「何で負けているのか」を具体的に特定します。</p>
+          </div>
+        </li>
+        <li>
+          <span class="no">3</span>
+          <div>
+            <h3>原因の切り分け</h3>
+            <p>運営で戻せるのか、建物に手を入れる必要があるのか。どちらでもない（立地・許可条件の制約）場合も、正直にお伝えします。</p>
+          </div>
+        </li>
+        <li>
+          <span class="no">4</span>
+          <div>
+            <h3>改善余地の試算とロードマップ</h3>
+            <p>打ち手ごとに、想定される効果と費用、着手の順番を整理してご提示します。この時点で他社と比較していただいて構いません。</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="diag__card">
+        <span class="eyebrow">FREE DIAGNOSIS</span>
+        <h3>稼働率診断<br>お申し込み概要</h3>
+        <dl class="diag__spec">
+          <div><dt>費用</dt><dd>無料</dd></div>
+          <div><dt>所要時間</dt><dd>オンライン30分のヒアリング</dd></div>
+          <div><dt>ご提出</dt><dd>診断レポート（3営業日以内）</dd></div>
+          <div><dt>ご用意</dt><dd>予約サイトの管理画面が分かるもの（スクリーンショット可）</dd></div>
+          <div><dt>対象</dt><dd>運営中の施設／開業準備中／物件取得を検討中</dd></div>
+          <div><dt>その後</dt><dd>ご契約の義務はありません</dd></div>
+        </dl>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--green btn--full">無料で稼働率診断を申し込む <span>→</span></a>
+        <p class="note">※ 診断結果は現況データにもとづく試算であり、改善後の稼働率や売上をお約束するものではありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ ISSUES ═══════════ -->
-<section class="sec sec--tint" id="issues">
+<section class="sec" id="issues">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">ISSUES</span>
-      <h2 class="h2">運営を続けるほど、<br>オーナー様の時間が奪われていく。</h2>
+      <h2 class="h2">こういう状態から、<br>立て直します。</h2>
+      <p class="lead">ご相談の入口として多いのは、次のような症状です。運営側の詰まりと、建物側の限界が混ざっています。</p>
     </div>
     <ul class="issues">
-      <li><span class="n">01</span><h3>深夜の海外ゲストからの連絡が止まらない</h3><p>時差のある問い合わせ、チェックイン直前のトラブル。返答が遅れるほど評価は下がり、検索順位も落ちていきます。</p></li>
-      <li><span class="n">02</span><h3>価格を動かせず、閑散期に埋まらない</h3><p>周辺の需給は毎日変わります。固定料金のままでは、繁忙期は取りこぼし、閑散期は空室が積み上がります。</p></li>
-      <li><span class="n">03</span><h3>清掃の手配と品質にばらつきが出る</h3><p>直前予約への対応、連泊明けのリネン。清掃品質はレビューに直結しますが、業者管理まで手が回りません。</p></li>
-      <li><span class="n">04</span><h3>英語の電話がかかってきても対応できない</h3><p>鍵が開かない、設備が壊れた。緊急時ほど電話が鳴ります。チャットだけでは収まらない場面があります。</p></li>
-      <li><span class="n">05</span><h3>近隣クレームとゴミ出しが精神的に重い</h3><p>騒音、ゴミの分別、共用部の使い方。近隣との関係悪化は、営業許可そのものを揺るがすリスクになります。</p></li>
-      <li><span class="n">06</span><h3>「何が利益を削っているのか」が見えない</h3><p>OTA手数料、チェックインシステム、防犯カメラ。小規模施設ほど固定費の比率は重く、そして見えづらい。</p></li>
+      <li><span class="n">01</span><h3>価格を動かせず、閑散期に埋まらない</h3><p>周辺の需給は毎日変わります。固定料金のままでは、繁忙期は取りこぼし、閑散期は空室が積み上がります。</p></li>
+      <li><span class="n">02</span><h3>写真に「行きたい」と思わせる一枚がない</h3><p>検索結果で選ばれるかは1枚目でほぼ決まります。撮り方の問題なのか、空間そのものの問題なのかで打ち手が変わります。</p></li>
+      <li><span class="n">03</span><h3>競合が設備を入れて、単価で抜かれた</h3><p>サウナ、ワークスペース、こだわりの寝具。近隣に投資した施設が現れると、同じ価格帯では戦えなくなります。</p></li>
+      <li><span class="n">04</span><h3>深夜の海外ゲストからの連絡が止まらない</h3><p>時差のある問い合わせ、チェックイン直前のトラブル。返答が遅れるほど評価は下がり、検索順位も落ちていきます。</p></li>
+      <li><span class="n">05</span><h3>内装の古さがレビューで指摘されている</h3><p>水回り、壁、照明。運営でカバーできる範囲を超えると、評価は下がり続けます。どこまで直すべきかの判断が要ります。</p></li>
+      <li><span class="n">06</span><h3>改装したいが、費用と回収が読めない</h3><p>いくらかけて、単価がいくら上がり、何年で戻るのか。ここが見えないまま工事に踏み切るのは危険です。</p></li>
     </ul>
-    <p class="bridge">これらを、<span class="g">どこまで手放すか</span>で選べるように。<br>やどりは運営管理を<span class="g">3つのプラン</span>に整理しました。</p>
+    <p class="bridge">まず<span class="g">どこに原因があるか</span>を見極め、<br><span class="g">必要な打ち手だけ</span>を順に実行します。</p>
   </div>
 </section>
 
@@ -548,9 +840,9 @@ table{border-collapse:collapse;width:100%}
 <section class="sec" id="plans">
   <div class="inner">
     <div class="head">
-      <span class="eyebrow">PLANS</span>
-      <h2 class="h2">3つのプラン</h2>
-      <p class="lead">「どこまで手放したいか」でお選びください。いずれのプランも<b style="color:var(--ink)">初期設定費用は1棟目0円</b>、月額固定費はいただきません。売上が立たない月に手数料は発生しません。</p>
+      <span class="eyebrow">STEP 02 ─ OPERATION</span>
+      <h2 class="h2">運営改善の3プラン</h2>
+      <p class="lead">診断で「運営に伸びしろがある」と判断した場合の打ち手です。「どこまで手放したいか」でお選びください。いずれのプランも<b style="color:var(--ink)">初期設定費用は1棟目0円</b>、月額固定費はいただきません。売上が立たない月に手数料は発生しません。</p>
     </div>
 
     <div class="plans">
@@ -714,12 +1006,96 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
+<!-- ═══════════ STEP 3 ─ 施設改善 ═══════════ -->
+<section class="sec" id="renovation">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">STEP 03 ─ RENOVATION</span>
+      <h2 class="h2">運営で届かないなら、<br>建物に手を入れます。</h2>
+      <p class="lead">合同会社やどりは定款に<b>内装仕上工事業</b>を掲げる事業者です。運営代行会社が外部の内装業者を紹介するのとは違い、稼働率と単価の観点から自ら図面を引き、現場を管理します。</p>
+    </div>
+
+    <ul class="reno">
+      <li>
+        <h3>インテリア・スタイリング</h3>
+        <p>工事を伴わない範囲で、家具・照明・寝具・グリーンを入れ替えます。<b>もっとも投資が小さく、写真の見え方が最も変わる</b>打ち手です。まずここから提案することが多いです。</p>
+      </li>
+      <li>
+        <h3>内装改装工事</h3>
+        <p>壁・床・建具・水回りの意匠。古さがレビューで指摘されている箇所を、費用対効果の高い順に絞って改修します。</p>
+      </li>
+      <li>
+        <h3>間取り・定員の見直し</h3>
+        <p>狙う客層に対して定員が合っていない場合、寝室構成やベッド配置から組み替えます。単価がもっとも動くのはここです。</p>
+      </li>
+      <li>
+        <h3>差別化設備の導入</h3>
+        <p>サウナ、ワークスペース、こだわりの浴室など。競合が持っていない滞在目的そのものをつくり、価格競争から降ります。</p>
+      </li>
+      <li>
+        <h3>プロカメラマンによる撮影</h3>
+        <p>改装後は必ず撮り直します。設計意図を理解したディレクションで、1枚目で選ばれる写真をつくります。</p>
+      </li>
+      <li>
+        <h3>備品・家具の選定と調達</h3>
+        <p>写真映えと耐久性、原状回復のしやすさを両立させた選定を行います。消耗の早い備品は運用コストまで含めて判断します。</p>
+      </li>
+    </ul>
+
+    <div class="reno__scope">
+      <h3>施工の進め方と費用について</h3>
+      <dl>
+        <dt>投資回収の試算を先に出します</dt>
+        <dd>工事金額、想定されるADRの変化、回収期間を整理してからご判断いただきます。<b>回収の見込みが立たない改装はおすすめしません。</b></dd>
+      </dl>
+      <dl>
+        <dt>施工体制</dt>
+        <dd>請負代金<b>500万円未満</b>の工事は当社が請け負います。これを超える規模では、当社が設計・ディレクション・施工管理を担い、施工そのものは<b>建設業許可を持つ協力会社に発注</b>します。</dd>
+      </dl>
+      <dl>
+        <dt>費用</dt>
+        <dd>個別お見積り。物件の規模、改装範囲、工期によって変動します。診断レポートの段階で概算レンジをお示しします。</dd>
+      </dl>
+      <dl>
+        <dt>運営との連動</dt>
+        <dd>改装中の休業期間と再開後の価格戦略まで一体で設計します。工事だけ終わって稼働が戻らない、という事態を避けます。</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 資金 ═══════════ -->
+<section class="sec sec--tint" id="finance">
+  <div class="inner sec--mid" style="max-width:1100px;margin:0 auto">
+    <div class="head">
+      <span class="eyebrow">FINANCE</span>
+      <h2 class="h2">改装資金のご相談</h2>
+    </div>
+
+    <div class="fin">
+      <div class="fin__head">
+        <h3>資金面は、提携パートナーへおつなぎします</h3>
+        <p>施設改善に資金が必要な場合、金融面に明るい提携パートナーをご紹介します。改装計画と収支計画は当社が作成し、そのままご相談に使っていただける形でお渡しします。「何にいくら必要で、どう回収するのか」が整理された状態で臨めるぶん、話が早く進みます。</p>
+      </div>
+      <dl>
+        <dt>当社が行うこと</dt>
+        <dd>改装計画・工事概算・収支計画と投資回収シミュレーションの作成、提携パートナーへのお取り次ぎ。</dd>
+      </dl>
+      <dl>
+        <dt>当社が行わないこと</dt>
+        <dd>融資そのものの実行、資金調達の代理・媒介。金融に関する判断と手続きは、提携パートナーおよびオーナー様の間で行っていただきます。</dd>
+      </dl>
+      <p class="fin__note">※ 合同会社やどりは貸金業者・金融商品仲介業者ではありません。資金調達の可否および条件は、提携パートナーの審査によります。ご紹介は、資金調達の成立を保証するものではありません。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ OPTIONS ═══════════ -->
 <section class="sec" id="options">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">OPTIONS</span>
-      <h2 class="h2">オプションサービス</h2>
+      <h2 class="h2">その他のオプション</h2>
       <p class="lead">いずれのプランにも追加いただけます。物件条件に応じて個別にお見積りします。</p>
     </div>
     <ul class="opts">
@@ -728,13 +1104,11 @@ table{border-collapse:collapse;width:100%}
         <p>清掃とリネン交換を当社が請け負います。業者探し、直前予約への差し込み、品質のばらつき、クレーム対応まで含めて<b>当社が一つの窓口として責任を負う</b>のが、単なる業者紹介との違いです。</p>
         <p class="price">個別お見積り<em>間取り・面積・稼働・リネン枚数から算出</em></p>
       </li>
-      <li><h3>プロカメラマンによる撮影</h3><p>掲載写真は稼働率に直結します。空間の設計意図まで理解したディレクションで撮影します。</p></li>
       <li><h3>許認可の取得代行</h3><p>旅館業（簡易宿所）・住宅宿泊事業の申請、消防・保健所協議までを代行します。</p></li>
       <li><h3>スマートロック・チェックインシステム導入</h3><p>無人チェックインの設計から機器選定・設置・運用設計まで一貫して対応します。</p></li>
       <li><h3>防犯カメラ・騒音検知の設置</h3><p>近隣トラブルとパーティー利用を未然に防ぐ設備を、コストを抑えて導入します。</p></li>
-      <li><h3>内装デザイン・リノベーション</h3><p>ADRを上げるための空間そのものを、設計から施工まで一貫してつくります。</p></li>
-      <li><h3>備品・家具の選定と調達</h3><p>写真映えと耐久性、そして原状回復のしやすさを両立させた選定を行います。</p></li>
       <li><h3>業務システムの構築</h3><p>予約・清掃・在庫の管理を自社ツールで効率化。ITコンサルティングの知見を活かします。</p></li>
+      <li><h3>物件取得前のフィージビリティ調査</h3><p>購入・賃借を検討中の物件について、許可の取りやすさと収益見込みを事前に精査します。</p></li>
     </ul>
   </div>
 </section>
@@ -814,8 +1188,8 @@ table{border-collapse:collapse;width:100%}
       <ul class="why__list">
         <li>
           <span class="n">01</span>
-          <h3>許認可・設計施工・運営を、通しで経験している</h3>
-          <p>運営だけを請ける会社ではありません。許可申請から設計・施工、そして日々の運営までを通しで手がけてきました。「この間取りではADRが上がらない」「この動線では清掃が回らない」を、図面の段階で判断できます。</p>
+          <h3>運営とハード、どちらが原因かを切り分けられる</h3>
+          <p>運営代行会社は運営しか見ず、内装会社は建物しか見ません。許可申請から設計・施工、日々の運営までを通しで経験しているからこそ、「この間取りではADRが上がらない」「これは価格設定の問題だ」を分けて判断できます。REBUILD の出発点はここです。</p>
         </li>
         <li>
           <span class="n">02</span>
@@ -834,6 +1208,11 @@ table{border-collapse:collapse;width:100%}
         </li>
         <li>
           <span class="n">05</span>
+          <h3>要らない改装は、要らないと言う</h3>
+          <p>工事を受注したい会社は改装を勧めます。私たちは運営でも稼げるため、運営改善で戻るなら「そのほうが早くて安い」と申し上げます。回収の見込みが立たない工事はおすすめしません。</p>
+        </li>
+        <li>
+          <span class="n">06</span>
           <h3>立ち上げて終わりにしない</h3>
           <p>運営も改善も、開業後こそ本番です。月次で数字を突き合わせ、稼働率と単価の両方を押し上げ続けます。長く寄り添うパートナーであり続けることが、やどりの姿勢です。</p>
         </li>
@@ -914,16 +1293,16 @@ table{border-collapse:collapse;width:100%}
   <div class="inner">
     <div class="head">
       <span class="eyebrow">FLOW</span>
-      <h2 class="h2">導入までの流れ</h2>
-      <p class="lead">お問い合わせから最短2週間で運営を開始できます。</p>
+      <h2 class="h2">お問い合わせから<br>着手までの流れ</h2>
+      <p class="lead">運営改善だけであれば、最短2週間で運営を開始できます。施設改善を伴う場合は、工事の規模に応じて別途スケジュールをご提示します。</p>
     </div>
     <ol class="flow">
       <li><span class="step">STEP 01</span><h3>お問い合わせ</h3><p>フォームまたはメールで。所要1分。現在の運営状況が分かる情報があるとスムーズです。</p><span class="time">1分</span></li>
-      <li><span class="step">STEP 02</span><h3>無料ヒアリング・運営診断</h3><p>オンライン30分。物件と現状の数字を伺い、改善余地がどこにあるかを率直にお伝えします。</p><span class="time">30分</span></li>
-      <li><span class="step">STEP 03</span><h3>ご提案・お見積り</h3><p>推奨プラン、想定稼働率と売上、オプション費用を含めた収支計画をご提示します。</p><span class="time">3営業日</span></li>
-      <li><span class="step">STEP 04</span><h3>ご契約</h3><p>業務範囲と責任分担を明記した管理委託契約を締結します。</p><span class="time">1〜3日</span></li>
-      <li><span class="step">STEP 05</span><h3>初期設定</h3><p>リスティング作成、価格設定、自動化構築、清掃体制の設計。1棟目は初期費用0円です。</p><span class="time">1〜2週間</span></li>
-      <li><span class="step">STEP 06</span><h3>運営開始・月次レポート</h3><p>稼働率・ADR・RevPARの推移と改善提案を毎月お届けします。</p><span class="time">運用開始</span></li>
+      <li><span class="step">STEP 02</span><h3>ヒアリング</h3><p>オンライン30分。物件と現状の数字を伺います。管理画面のスクリーンショットをご用意いただけると精度が上がります。</p><span class="time">30分</span></li>
+      <li><span class="step">STEP 03</span><h3>稼働率診断レポート</h3><p>競合ベンチマーク、原因の切り分け、改善余地の試算とロードマップをご提示します。<b>ここまで無料</b>です。</p><span class="time">3営業日</span></li>
+      <li><span class="step">STEP 04</span><h3>打ち手の選択とご契約</h3><p>運営改善のみか、施設改善も行うか。必要な範囲だけを選んでいただき、業務範囲と責任分担を明記した契約を締結します。</p><span class="time">1〜3日</span></li>
+      <li><span class="step">STEP 05</span><h3>着手</h3><p>運営改善はリスティング・価格・自動化・清掃体制の構築（1棟目は初期費用0円）。施設改善は設計と工程の確定から。</p><span class="time">1〜2週間</span></li>
+      <li><span class="step">STEP 06</span><h3>運営開始・月次レポート</h3><p>稼働率・ADR・RevPARの推移と改善提案を毎月お届けします。改装を行った場合は投資回収の進捗も併せて報告します。</p><span class="time">運用開始</span></li>
     </ol>
   </div>
 </section>
@@ -936,6 +1315,11 @@ table{border-collapse:collapse;width:100%}
       <h2 class="h2">よくあるご質問</h2>
     </div>
     <div class="faq">
+      <details><summary>稼働率診断は本当に無料ですか？</summary><div><p>無料です。ヒアリングと診断レポートのご提出までで費用は発生せず、その後のご契約義務もありません。診断の結果「今のままで問題ありません」「立地の制約で伸びしろが小さい」という結論になることもあり、その場合もそのままお伝えします。他社と比較するための材料としてお使いいただいて構いません。</p></div></details>
+      <details><summary>運営改善だけ、または施設改善だけを頼むことはできますか？</summary><div><p>できます。REBUILD は3ステップを必ず通すものではなく、診断の結果として必要な打ち手だけを選んでいただく形です。運営改善のみのご依頼が最も多く、逆に「運営は自分で続けるが内装だけ相談したい」というご依頼も承っています。</p></div></details>
+      <details><summary>内装工事はどこまで自社で対応するのですか？</summary><div><p>合同会社やどりは定款に内装仕上工事業を掲げており、請負代金500万円未満の工事は当社が請け負います。これを超える規模の場合は、当社が設計・ディレクション・施工管理を担い、施工そのものは建設業許可を持つ協力会社に発注します。いずれの場合も、稼働率と単価の観点から図面を引き、現場を管理するのは当社です。</p></div></details>
+      <details><summary>改装費用の資金調達も相談できますか？</summary><div><p>金融面に明るい提携パートナーをご紹介します。改装計画・工事概算・収支計画と投資回収シミュレーションは当社が作成し、そのままご相談に使える形でお渡しします。ただし当社は貸金業者・金融商品仲介業者ではないため、融資の実行や資金調達の代理・媒介は行いません。調達の可否と条件は提携パートナーの審査によります。</p></div></details>
+      <details><summary>改装すれば必ず稼働率は上がりますか？</summary><div><p>お約束はできません。診断でお示しするのは現況データと競合比較にもとづく試算であり、実際の結果は立地・季節・市況・競合の動きによって変動します。だからこそ着手前に投資回収の試算をお出しし、回収の見込みが立たない改装はおすすめしないという方針を取っています。</p></div></details>
       <details><summary>手数料はどのタイミングで発生しますか？</summary><div><p>各予約サイトからご入金があった実績に対して、翌月にご請求します。売上が発生しない月は手数料もいただきません（最低手数料は稼働のある月に適用されます）。</p></div></details>
       <details><summary>最低手数料はどのような場合に適用されますか？</summary><div><p>算出した手数料が最低額を下回った場合に、最低額を適用します。たとえばライトプランで月商20万円の場合、料率計算では約19,400円ですが、最低額の30,000円をご請求します。月商31万円以上であれば、実質的に料率のみのご負担です。</p></div></details>
       <details><summary>清掃はどのように扱われますか？</summary><div><p>ミドル・フルプランでは、清掃とリネンの手配・スケジュール管理・品質チェック・クレーム対応を当社が請け負います。清掃そのものの費用は間取り・面積・稼働・リネン枚数から個別にお見積りし、実施分をご請求します。ライトプランでもオプションとして追加いただけます。</p></div></details>
@@ -969,14 +1353,16 @@ table{border-collapse:collapse;width:100%}
 <!-- ═══════════ CTA ═══════════ -->
 <section class="cta" id="contact">
   <div class="inner">
+    <p class="cta__wm">REBUILD ／ 宿泊経営リビルド</p>
     <h2>まず、今の数字を<br>見せてください。</h2>
-    <p>伸ばせる余地があるのか、ないのか。それだけでもお伝えする価値があると考えています。ご検討段階のご相談、他社との比較のためのご相談も歓迎です。</p>
+    <p>原因が運営にあるのか、建物にあるのか。伸ばせる余地があるのか、ないのか。それだけでもお伝えする価値があると考えています。派手な打ち手は打ちません。原因から順に、確実に。</p>
     <div class="cta__btns">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--white">無料で運営診断を申し込む <span style="opacity:.4;font-weight:400">|</span> <span>→</span></a>
-      <a href="mailto:yadori.2026@gmail.com?subject=%E6%97%85%E9%A4%A8%E6%A5%AD%E9%81%8B%E5%96%B6%E7%AE%A1%E7%90%86%E4%BB%A3%E8%A1%8C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E7%89%A9%E4%BB%B6%E6%89%80%E5%9C%A8%E5%9C%B0%EF%BC%9A%0A%E2%96%A0%E6%A3%9F%E6%95%B0%E3%83%BB%E5%AE%A4%E6%95%B0%EF%BC%9A%0A%E2%96%A0%E7%8F%BE%E5%9C%A8%E3%81%AE%E7%8A%B6%E6%B3%81%EF%BC%9A%0A%E2%96%A0%E3%81%94%E5%B8%8C%E6%9C%9B%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%9A%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A" class="btn btn--ghostW">メールで相談する</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--white">無料で稼働率診断を申し込む <span style="opacity:.4;font-weight:400">|</span> <span>→</span></a>
+      <a href="mailto:yadori.2026@gmail.com?subject=REBUILD%20%E5%AE%BF%E6%B3%8A%E7%B5%8C%E5%96%B6%E3%83%AA%E3%83%93%E3%83%AB%E3%83%89%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E7%89%A9%E4%BB%B6%E6%89%80%E5%9C%A8%E5%9C%B0%EF%BC%9A%0A%E2%96%A0%E6%A3%9F%E6%95%B0%E3%83%BB%E5%AE%A4%E6%95%B0%EF%BC%9A%0A%E2%96%A0%E7%8F%BE%E5%9C%A8%E3%81%AE%E7%A8%BC%E5%83%8D%E7%8E%87%EF%BC%9A%0A%E2%96%A0%E7%8F%BE%E5%9C%A8%E3%81%AE%E7%8A%B6%E6%B3%81%EF%BC%9A%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%88%E9%81%8B%E5%96%B6%EF%BC%8F%E6%96%BD%E8%A8%AD%E6%94%B9%E5%96%84%EF%BC%8F%E4%B8%A1%E6%96%B9%EF%BC%89%EF%BC%9A%0A" class="btn btn--ghostW">メールで相談する</a>
     </div>
     <ul class="cta__list">
-      <li>今の稼働率が適正か知りたい</li>
+      <li>稼働率が上がらない原因を知りたい</li>
+      <li>改装すべきか判断がつかない</li>
       <li>他社からの乗り換えを検討中</li>
       <li>物件購入前に収益を確かめたい</li>
       <li>許認可の取得から相談したい</li>
@@ -991,15 +1377,24 @@ table{border-collapse:collapse;width:100%}
     <div class="ftr__top">
       <div class="ftr__brand">
         <a href="https://yadori-llc.com/"><img src="assets/brand/logo.png" alt="yadori"></a>
-        <p>合同会社やどり</p>
+        <p>REBUILD ／ 宿泊経営リビルド<br>合同会社やどり</p>
       </div>
       <div class="ftr__cols">
+        <div>
+          <h3>REBUILD</h3>
+          <div>
+            <a href="#program">プログラム全体像</a>
+            <a href="#diagnosis">STEP 1 稼働率診断</a>
+            <a href="#plans">STEP 2 運営改善</a>
+            <a href="#renovation">STEP 3 施設改善</a>
+            <a href="#finance">資金のご相談</a>
+          </div>
+        </div>
         <div>
           <h3>MENU</h3>
           <div>
             <a href="https://yadori-llc.com/about.html">会社情報</a>
             <a href="https://yadori-llc.com/services.html">事業内容</a>
-            <a href="#top">運営管理代行</a>
             <a href="https://yadori-llc.com/works.html">実績一覧</a>
             <a href="https://yadori-llc.com/news.html">お知らせ</a>
           </div>
@@ -1058,7 +1453,9 @@ table{border-collapse:collapse;width:100%}
   /* ── scroll reveal ── */
   var targets = document.querySelectorAll(
     '.head, .issues li, .bridge, .rblock, .plan, .rules, .tscroll, .opts li,' +
-    '.sim, .why__media, .why__list li, .wrow, .flow li, .faq details, .company, .cta .inner'
+    '.sim, .why__media, .why__list li, .wrow, .flow li, .faq details, .company, .cta .inner,' +
+    '.split__col, .split__vs, .split__concl, .prog__step, .prog__aside,' +
+    '.diag__list li, .diag__card, .reno li, .reno__scope, .fin'
   );
   if('IntersectionObserver' in window){
     targets.forEach(function(el){ el.classList.add('rv'); });

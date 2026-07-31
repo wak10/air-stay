@@ -1,10 +1,43 @@
-# REBUILD ／ 宿泊経営リビルド — LP
+# AirStay — LP
 
-合同会社やどりの受託営業用ランディングページ。
+合同会社やどりが提供する宿泊経営サービス群「AirStay」のランディングページ。
 稼働率が上がらない原因を「運営（ソフト）」か「建物（ハード）」かに切り分け、
-診断 → 運営改善 → 施設改善 → 資金の4レイヤーを一本のプログラムとして提供する。
+必要なサービスだけを選んでもらう構成。
 
-- 公開URL: **https://management.yadori-llc.com/**
+## サービス構成
+
+| プロダクト | 内容 | 価格 |
+|---|---|---|
+| **AirStay 稼働率診断** | すべての入口。競合ベンチマークと原因の切り分け | 無料 |
+| **AirStay 運営代行** | ライト10% / ミドル16% / フル20% の3プラン | 手数料10%〜 |
+| **AirStay 施設改善** | インテリア・内装工事・間取り見直し・差別化設備 | 個別見積 |
+| **AirStay 開業支援** | FS調査・許可取得・設計施工・初期設営 | 個別見積 |
+
+資金は独立プロダクトにせず「提携パートナーへの取次」として添える扱い。
+
+## ブランド
+
+- ワードマーク: `AirStay`（グラデーションのテキストクリップ）
+- 運営会社ロゴ（やどり）はナビ・フッターに併記
+
+### カラー
+
+Airbnb の現行ブランドカラー `#FF385C`（Rausch）とは**色相を意図的にずらしている**。
+Air- 接頭の名称と組み合わせると出所混同のリスクが上がるため、オレンジ寄りのコーラルを採用。
+
+| 変数 | 値 | 用途 | 白背景コントラスト |
+|---|---|---|---|
+| `--coral` | `#C9421C` | 小さい文字・アイコン・ボーダー | 4.91:1 ✓ AA |
+| `--coral-vivid` | `#F4552B` | 装飾・グラデーション中間 | 装飾のみ |
+| `--coral-lite` | `#FF8A4C` | グラデーション始点・暗背景上 | 装飾のみ |
+| `--coral-dark` | `#A0330F` | hover | 7:1超 |
+| `--grad` | `#FF8A4C → #F4552B → #DC4520` | ワードマーク・CTA・見出し強調 | — |
+| `--grad-btn` | `#E84A20 → #C03A12` | ボタン・バッジ・番号 | 白文字で4.0〜5.5:1 |
+
+**小さい文字に `--coral-vivid` 以降の明るい色を使わないこと**（AA を割ります）。
+
+- 公開URL: **https://airstay.yadori-llc.com/**
+- リポジトリ: `wak10/air-stay`
 - ホスティング: GitHub Pages（このリポジトリ単独）
 - コーポレートサイト: https://yadori-llc.com （別リポジトリ `yadori-hp`）
 
@@ -12,7 +45,7 @@
 
 ```
 index.html              LP本体（CSS/JSインライン、単一ファイル完結）
-CNAME                   management.yadori-llc.com
+CNAME                   airstay.yadori-llc.com
 .nojekyll               Jekyll処理を無効化
 favicon.png
 assets/
@@ -34,11 +67,12 @@ http://localhost:5510 で確認できます。
 
 ## 公開手順（初回）
 
-### 1. GitHubリポジトリを作成してpush
+### 1. push
 
 ```bash
 cd ~/dev/yadori-management-lp
-gh repo create yadori-management-lp --public --source=. --remote=origin --push
+# リポジトリは wak10/air-stay として作成済み
+git push -u origin main
 ```
 
 ### 2. GitHub Pages を有効化
@@ -47,7 +81,7 @@ gh repo create yadori-management-lp --public --source=. --remote=origin --push
 
 - Source: `Deploy from a branch`
 - Branch: `main` / `/ (root)`
-- Custom domain: `management.yadori-llc.com`
+- Custom domain: `airstay.yadori-llc.com`
 - Enforce HTTPS: 有効（証明書の発行まで数分〜1時間程度かかります）
 
 ### 3. DNS にCNAMEレコードを追加
@@ -56,15 +90,15 @@ gh repo create yadori-management-lp --public --source=. --remote=origin --push
 
 | Type | Name | Value | TTL |
 |---|---|---|---|
-| CNAME | `management` | `wak10.github.io.` | 3600（自動） |
+| CNAME | `airstay` | `wak10.github.io.` | 3600（自動） |
 
 > apexドメイン（`yadori-llc.com`）側のAレコードは変更しないでください。コーポレートサイトが停止します。
 
 反映確認:
 
 ```bash
-dig +short management.yadori-llc.com
-curl -sI https://management.yadori-llc.com/ | head -1
+dig +short airstay.yadori-llc.com
+curl -sI https://airstay.yadori-llc.com/ | head -1
 ```
 
 ## 更新手順（2回目以降）
@@ -97,8 +131,10 @@ LP側に独自のフォームやサーバーは持っていません。
 | 実績数値 | `#result` セクション |
 | 診断の内容・所要時間 | `#diagnosis` の `.diag__list` と `.diag__spec` |
 | 施設改善のメニュー | `#renovation` の `.reno` |
+| 開業支援のステップ | `#startup` の `.stup` |
+| サービス一覧のカード | `#services` の `.svc` |
 | **建設業許可を取得したとき** | `#renovation` の `.reno__scope`「施工体制」、FAQ「内装工事はどこまで自社で対応するのですか？」、`.head` のリード文。**500万円未満の記述をすべて外し、許可番号を追記する** |
-| 提携パートナーの社名を出すとき | `#finance` の `.fin__head` と `.fin__note`、`#program` の `.prog__aside`、FAQ「改装費用の資金調達も相談できますか？」 |
+| 提携パートナーの社名を出すとき | `#finance` の `.fin__head` と `.fin__note`、`#services` の `.prog__aside`、FAQ「改装費用の資金調達も相談できますか？」 |
 
 ## 表記のルール（変更時に必ず守ること）
 
@@ -114,9 +150,9 @@ LP側に独自のフォームやサーバーは持っていません。
 
 ## 関連する変更（`yadori-hp` 側）
 
-- 全ページのナビ／フッターに「**宿泊経営リビルド**」を追加し、リンク先を本サブドメインに設定
+- 全ページのナビ／フッターに「**AirStay**」を追加し、リンク先を本サブドメインに設定
 - 旧URL `yadori-llc.com/lodging-management.html` は本サブドメインへのリダイレクトページに置き換え済み
 
-パッケージ名を変更する場合、コーポレート側8ファイル（`index.html` `about.html` `services.html`
+ブランド名を変更する場合、コーポレート側8ファイル（`index.html` `about.html` `services.html`
 `work-detail.html` `news.html` `privacy.html` `SiteNav.html` `SiteFooter.html`）の
 アンカーラベルも合わせて差し替えてください。リンク先URLは変更不要です。

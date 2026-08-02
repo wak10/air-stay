@@ -164,6 +164,7 @@ table{border-collapse:collapse;width:100%}
 .phero__kpi b{display:block;font-size:40px;font-weight:900;color:var(--coral);line-height:1.1}
 .phero__kpi b small{font-size:18px}
 .phero__kpi span{display:block;font-size:13px;font-weight:500;color:var(--ink-mid);margin-top:4px}
+.kpi__note{display:block;font-style:normal;font-size:11px;font-weight:400;color:var(--ink-soft);margin-top:2px}
 
 /* ═══════════════ SPLIT（原因の切り分け） ═══════════════ */
 .split{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-top:8px}
@@ -412,6 +413,7 @@ table{border-collapse:collapse;width:100%}
 .tbl thead th:first-child{width:42%;text-align:left;border-left:none}
 .tbl .grp th{background:var(--tint);font-size:13px;font-weight:900;letter-spacing:.1em;padding:12px 16px;text-align:left;color:var(--coral)}
 .tbl tbody tr:not(.grp) th{text-align:left;font-weight:500;padding:14px 16px;border-bottom:1px solid var(--line);line-height:1.6}
+.tbl__note{display:block;font-style:normal;font-size:11px;font-weight:400;color:var(--ink-soft);margin-top:3px}
 .tbl tbody td{text-align:center;padding:14px 12px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);font-size:15px;font-weight:700;color:var(--ink-mid)}
 .tbl tbody td.yes{color:var(--coral)}
 .tbl tbody td.is-reco{background:#FFF6F2}
@@ -688,7 +690,7 @@ table{border-collapse:collapse;width:100%}
   <p class="phero__lead">
     掲載・価格・ゲスト対応から、清掃管理・英語での電話対応まで。
     「どこまで手放したいか」で選べる<b>3つのプラン</b>をご用意しました。
-    手数料は10%から、初期設定費用は1棟目0円。売上が立たない月に手数料は発生しません。
+    手数料は10%から、初期設定費用は1棟目0円（設置物品は除く）。売上が立たない月に手数料は発生しません。
     運営だけで届かないときは、内装改装や開業支援まで同じ窓口でお引き受けします。
   </p>
   <div class="phero__cta">
@@ -702,7 +704,7 @@ table{border-collapse:collapse;width:100%}
     <li><b>90<small>%</small></b><span>都内型施設の平均稼働率</span></li>
     <li><b>88<small>%</small></b><span>スーパーホスト獲得率</span></li>
     <li><b>10<small>%〜</small></b><span>運営手数料</span></li>
-    <li><b>0<small>円</small></b><span>初期設定費用（1棟目）</span></li>
+    <li><b>0<small>円</small></b><span>初期設定費用（1棟目）<em class="kpi__note">※設置物品は除く</em></span></li>
   </ul>
 </header>
 
@@ -767,7 +769,7 @@ table{border-collapse:collapse;width:100%}
     <div class="head">
       <span class="eyebrow">AIRSTAY 運営代行</span>
       <h2 class="h2">運営代行の3プラン</h2>
-      <p class="lead">稼働率診断で「運営に伸びしろがある」と判断した場合の打ち手です。「どこまで手放したいか」でお選びください。いずれのプランも<b style="color:var(--ink)">初期設定費用は1棟目0円</b>、月額固定費はいただきません。売上が立たない月に手数料は発生しません。</p>
+      <p class="lead">稼働率診断で「運営に伸びしろがある」と判断した場合の打ち手です。「どこまで手放したいか」でお選びください。いずれのプランも<b style="color:var(--ink)">初期設定費用は1棟目0円</b>（設置物品は除く）、月額固定費はいただきません。売上が立たない月に手数料は発生しません。</p>
     </div>
 
     <div class="plans">
@@ -863,10 +865,10 @@ table{border-collapse:collapse;width:100%}
       <h3>料金の考え方</h3>
       <dl class="rules__grid">
         <div><dt>手数料の計算基準</dt><dd>各予約サイトからの<b>入金額（サイト手数料控除後）の合計 × 料率</b>。売上が立たない月は手数料も発生しません。</dd></div>
-        <div><dt>初期設定費用</dt><dd><b>1棟目は0円</b>（リスティング・価格設定・自動化構築 一式）。2棟目以降は1棟につき100,000円。</dd></div>
+        <div><dt>初期設定費用</dt><dd><b>1棟目は0円</b>（リスティング作成・価格設定・自動化構築 一式）。2棟目以降は1棟につき100,000円。<b>ただし設置物品は除きます。</b>スマートロック、防犯カメラ、家具・寝具、アメニティ等の物品費および設置工事費は実費でのご負担となります。</dd></div>
         <div><dt>複数棟の割引</dt><dd><b>3棟以上で −1%</b>、<b>5棟以上で −2%</b>。棟数が増えるほど料率を下げてお預かりします。</dd></div>
         <div><dt>契約期間</dt><dd>最低6ヶ月。以降は1ヶ月前のご連絡で解約いただけます。違約金はありません。</dd></div>
-        <div><dt>オーナー様のご負担</dt><dd>水道光熱費・清掃費・リネン費・備品代・保険料・OTA手数料・各種システム利用料は実費でのご負担となります。</dd></div>
+        <div><dt>オーナー様のご負担</dt><dd>水道光熱費・清掃費・リネン費・保険料・OTA手数料・各種システム利用料に加え、<b>設置物品</b>（スマートロック、防犯カメラ、家具・寝具、アメニティ等）の物品費と設置工事費は実費でのご負担となります。</dd></div>
         <div><dt>対応エリア</dt><dd>ライト・ミドルプランは<b>全国対応可</b>（オンライン完結）。フルプランの現地対応は東京23区を中心に順次拡大しています。</dd></div>
       </dl>
       <p class="note-s">※ 表示価格はすべて税別です。物件の規模・稼働状況により、個別にお見積りする場合があります。</p>
@@ -918,7 +920,7 @@ table{border-collapse:collapse;width:100%}
           <tr><th>専任担当者アサイン</th><td>−</td><td class="is-reco">−</td><td class="yes">●</td></tr>
 
           <tr class="grp"><th colspan="4">費用</th></tr>
-          <tr><th>初期設定費用（1棟目）</th><td>0円</td><td class="is-reco">0円</td><td>0円</td></tr>
+          <tr><th>初期設定費用（1棟目）<em class="tbl__note">※設置物品は除く</em></th><td>0円</td><td class="is-reco">0円</td><td>0円</td></tr>
           <tr><th>最低手数料（月・棟）</th><td>30,000円</td><td class="is-reco">50,000円</td><td>60,000円</td></tr>
         </tbody>
       </table>
@@ -1142,7 +1144,7 @@ table{border-collapse:collapse;width:100%}
       <li><span class="step">STEP 02</span><h3>ヒアリング</h3><p>オンライン30分。物件と現状の数字を伺います。管理画面のスクリーンショットをご用意いただけると精度が上がります。</p><span class="time">30分</span></li>
       <li><span class="step">STEP 03</span><h3>稼働率診断レポート</h3><p>競合ベンチマーク、原因の切り分け、改善余地の試算とロードマップをご提示します。<b>ここまで無料</b>です。</p><span class="time">3営業日</span></li>
       <li><span class="step">STEP 04</span><h3>打ち手の選択とご契約</h3><p>運営改善のみか、施設改善も行うか。必要な範囲だけを選んでいただき、業務範囲と責任分担を明記した契約を締結します。</p><span class="time">1〜3日</span></li>
-      <li><span class="step">STEP 05</span><h3>着手</h3><p>運営改善はリスティング・価格・自動化・清掃体制の構築（1棟目は初期費用0円）。施設改善は設計と工程の確定から。</p><span class="time">1〜2週間</span></li>
+      <li><span class="step">STEP 05</span><h3>着手</h3><p>運営改善はリスティング・価格・自動化・清掃体制の構築（1棟目は初期設定費用0円・設置物品は除く）。施設改善は設計と工程の確定から。</p><span class="time">1〜2週間</span></li>
       <li><span class="step">STEP 06</span><h3>運営開始・月次レポート</h3><p>稼働率・ADR・RevPARの推移と改善提案を毎月お届けします。改装を行った場合は投資回収の進捗も併せて報告します。</p><span class="time">運用開始</span></li>
     </ol>
   </div>
@@ -1353,7 +1355,7 @@ table{border-collapse:collapse;width:100%}
         <span class="stup__n">06</span>
         <h3>運営代行へシームレスに接続</h3>
         <p>そのまま AirStay 運営代行へ引き継ぎます。物件を設計段階から理解している担当がそのまま運営するため、引き継ぎのロスがありません。</p>
-        <span class="stup__tag">1棟目は初期設定費用0円</span>
+        <span class="stup__tag">1棟目は初期設定費用0円（設置物品除く）</span>
       </li>
     </ol>
 
@@ -1407,7 +1409,7 @@ table{border-collapse:collapse;width:100%}
       <details><summary>清掃はどのように扱われますか？</summary><div><p>ミドル・フルプランでは、清掃とリネンの手配・スケジュール管理・品質チェック・クレーム対応を当社が請け負います。清掃そのものの費用は間取り・面積・稼働・リネン枚数から個別にお見積りし、実施分をご請求します。ライトプランでもオプションとして追加いただけます。</p></div></details>
       <details><summary>すでにAirbnbで自主運営しています。途中から引き継げますか？</summary><div><p>可能です。既存のリスティング、レビュー、スーパーホストのステータスを維持したまま運営を引き継ぎます。すでに予約が入っている分についても、そのまま対応を承ります。</p></div></details>
       <details><summary>住宅宿泊事業法（民泊新法）の物件でも依頼できますか？</summary><div><p>物件が旅館業法の簡易宿所営業か、住宅宿泊事業法の届出住宅かによって、委託できる業務の範囲や必要な登録が異なります。まずは許可・届出の種別をお知らせください。物件の状況に応じて、適法に受託できる形をご提案します。</p></div></details>
-      <details><summary>1棟だけでも依頼できますか？</summary><div><p>できます。1棟目の初期設定費用は0円です。まずは1棟でお試しいただき、成果を見てから棟数を増やされるオーナー様が多くいらっしゃいます。</p></div></details>
+      <details><summary>1棟だけでも依頼できますか？</summary><div><p>できます。1棟目の初期設定費用は0円です（スマートロック・防犯カメラ・家具・備品等の設置物品は実費でのご負担となります）。まずは1棟でお試しいただき、成果を見てから棟数を増やされるオーナー様が多くいらっしゃいます。</p></div></details>
       <details><summary>東京以外の物件も対応できますか？</summary><div><p>ライトプラン・ミドルプランはオンラインで完結するため全国対応が可能です（清掃は現地の提携先を開拓します）。フルプランの電話対応は全国対応、現地駆けつけは東京23区を中心に体制を構築中です。</p></div></details>
       <details><summary>途中でプランを変更できますか？</summary><div><p>可能です。月単位で変更いただけます。まずライトプランで始め、稼働が安定してからミドルへ移行するという進め方もおすすめしています。</p></div></details>
       <details><summary>解約に条件はありますか？</summary><div><p>最低契約期間は6ヶ月です。以降は1ヶ月前にご連絡いただければ解約でき、違約金は発生しません。リスティングとアカウントはオーナー様に帰属したまま運用します。</p></div></details>

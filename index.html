@@ -41,7 +41,7 @@
   },
   "offers": [
     { "@type": "Offer", "name": "ライトプラン", "description": "運営手数料10%／最低手数料30,000円（月・棟）" },
-    { "@type": "Offer", "name": "ミドルプラン", "description": "運営手数料16%／最低手数料50,000円（月・棟）" },
+    { "@type": "Offer", "name": "ミドルプラン", "description": "運営手数料16%／最低手数料40,000円（月・棟）" },
     { "@type": "Offer", "name": "フルプラン", "description": "運営手数料20%／最低手数料60,000円（月・棟）。英語電話対応窓口つき" }
   ]
 }
@@ -417,8 +417,9 @@ table{border-collapse:collapse;width:100%}
 .tbl tbody td{text-align:center;padding:14px 12px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);font-size:15px;font-weight:700;color:var(--ink-mid)}
 .tbl tbody td.yes{color:var(--coral)}
 .tbl tbody td.is-reco{background:#FFF6F2}
-.tbl tbody tr.hl th{background:var(--tint);font-weight:700}
-.tbl tbody tr.hl td{background:var(--tint)}
+.tbl tbody tr.hl th{background:#FFE0D2;font-weight:700;box-shadow:inset 3px 0 0 var(--coral)}
+.tbl tbody tr.hl td{background:#FFE0D2}
+.tbl tbody tr.hl td.is-reco{background:#FFD4C2}
 .legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:13px;font-weight:400;color:var(--ink-mid)}
 .legend b{color:var(--coral);font-weight:900}
 
@@ -781,9 +782,8 @@ table{border-collapse:collapse;width:100%}
           <li><b>レビュー投稿代行・レビュー管理</b><span>チェックアウト後のレビュー投稿、低評価時のリカバリー対応</span></li>
           <li><b>宿泊者名簿の回収・管理</b><span>旅館業法に基づく名簿の取得・保管を代行</span></li>
           <li><b>損害請求サポート</b><span>汚損・破損時のAirCover等 申請代行</span></li>
-          <li><b>月次レポート</b><span>稼働率・ADR・RevPAR・売上の推移と改善提案</span></li>
         </ul>
-        <div class="plan__excl"><b>対象外</b>清掃・リネン<i>（オプションで承ります）</i>／電話対応／現地駆けつけ／複数OTA展開</div>
+        <div class="plan__excl"><b>対象外</b>月次レポート／清掃・リネン<i>（オプションで承ります）</i>／電話対応／現地駆けつけ／複数OTA展開</div>
         <div class="plan__btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--outline">このプランを相談する</a></div>
       </article>
 
@@ -796,7 +796,7 @@ table{border-collapse:collapse;width:100%}
         <div class="plan__price">
           <b class="plan__rate">16<small>%</small></b>
           <span class="plan__unit">運営手数料</span>
-          <p class="plan__min">最低手数料 <b>50,000</b>円／月・棟</p>
+          <p class="plan__min">最低手数料 <b>40,000</b>円／月・棟</p>
         </div>
         <p class="plan__for"><b>こんなオーナー様へ</b>Airbnbだけでは頭打ち。販路を増やし、清掃も備品も含めて実務から離れたい。</p>
         <ul class="plan__list">
@@ -807,6 +807,7 @@ table{border-collapse:collapse;width:100%}
           <li><b>運営自動化の設計・構築</b><span>自動返信／スマートロック連携／チェックイン通知の仕組み化</span></li>
           <li><b>AIチャットボット導入・チューニング</b><span>よくある質問・チェックイン手順・周辺情報を24時間 多言語で自動応答</span></li>
           <li><b>近隣対応窓口</b><span>騒音・ゴミ出し・共用部トラブルの一次受けを代行し、オーナー様に連絡が行かない状態をつくります</span></li>
+          <li><b>月次レポート</b><span>稼働率・ADR・RevPAR・売上の推移と改善提案を毎月お届けします</span></li>
           <li><b>四半期の収益改善提案</b><span>価格戦略の見直し、設備投資のROI試算、コストダウン施策</span></li>
         </ul>
         <div class="plan__excl"><b>対象外</b>電話対応／現地駆けつけ</div>
@@ -886,7 +887,7 @@ table{border-collapse:collapse;width:100%}
           <tr class="grp"><th colspan="4">掲載・収益管理</th></tr>
           <tr><th>Airbnb リスティング作成・最適化</th><td class="yes">●</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
           <tr><th>ダイナミックプライシング（PriceLabs）</th><td class="yes">●</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
-          <tr><th>月次レポート・改善提案</th><td class="yes">●</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
+          <tr><th>月次レポート・改善提案</th><td>−</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
           <tr><th>複数OTA展開・サイトコントローラー管理</th><td>−</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
           <tr><th>四半期の収益改善コンサルティング</th><td>−</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
 
@@ -910,7 +911,7 @@ table{border-collapse:collapse;width:100%}
 
           <tr class="grp"><th colspan="4">費用</th></tr>
           <tr><th>初期設定費用（1棟目）<em class="tbl__note">※設置物品は除く</em></th><td>0円</td><td class="is-reco">0円</td><td>0円</td></tr>
-          <tr><th>最低手数料（月・棟）</th><td>30,000円</td><td class="is-reco">50,000円</td><td>60,000円</td></tr>
+          <tr><th>最低手数料（月・棟）</th><td>30,000円</td><td class="is-reco">40,000円</td><td>60,000円</td></tr>
         </tbody>
       </table>
     </div>
@@ -966,7 +967,7 @@ table{border-collapse:collapse;width:100%}
           <span class="sim__lab" id="sim-plan-label">プラン</span>
           <div class="sim__tabs" role="radiogroup" aria-labelledby="sim-plan-label">
             <button type="button" class="sim__tab" data-rate="10" data-min="30000" data-name="ライト">ライト<em>10%</em></button>
-            <button type="button" class="sim__tab is-on" data-rate="16" data-min="50000" data-name="ミドル">ミドル<em>16%</em></button>
+            <button type="button" class="sim__tab is-on" data-rate="16" data-min="40000" data-name="ミドル">ミドル<em>16%</em></button>
             <button type="button" class="sim__tab" data-rate="20" data-min="60000" data-name="フル">フル<em>20%</em></button>
           </div>
         </div>

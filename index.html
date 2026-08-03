@@ -317,6 +317,13 @@ table{border-collapse:collapse;width:100%}
 .scope__box--cant li::before{
   content:"";position:absolute;left:4px;top:11px;width:14px;height:2px;background:var(--ink-soft);
 }
+.scope__opt{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 34px}
+.scope__opt h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.scope__opt > p{font-size:13px;font-weight:400;color:var(--ink-mid);margin-bottom:22px;max-width:70ch}
+.scope__opt ul{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.scope__opt li{background:var(--tint);border-radius:16px;padding:18px 20px}
+.scope__opt li b{display:block;font-size:14.5px;font-weight:900;color:var(--coral);margin-bottom:5px}
+.scope__opt li span{font-size:12.5px;font-weight:400;line-height:1.75;color:var(--ink-mid)}
 .roles{margin-top:22px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
 .roles__row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
 .roles__row:last-child{border-bottom:none}
@@ -468,6 +475,24 @@ table{border-collapse:collapse;width:100%}
 .legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:13px;font-weight:400;color:var(--ink-mid)}
 .legend b{color:var(--coral);font-weight:900}
 
+/* 比較表のモバイル対応：1列目を固定して横スクロール */
+.tbl__hint{display:none;font-size:12px;font-weight:700;color:var(--coral);margin-bottom:10px;text-align:right}
+@media (max-width:768px){
+  .tbl__hint{display:block}
+  .tbl{min-width:560px;font-size:13px}
+  .tbl thead th{padding:14px 8px;font-size:13px}
+  .tbl thead th em{font-size:16px}
+  .tbl thead th:first-child{width:190px;position:sticky;left:0;z-index:3}
+  .tbl .grp th{padding:10px 12px;font-size:12px;position:sticky;left:0;z-index:2}
+  .tbl tbody tr:not(.grp) th{
+    padding:12px;width:190px;position:sticky;left:0;z-index:2;
+    background:#fff;box-shadow:1px 0 0 var(--line);
+  }
+  .tbl tbody tr.hl th{background:#FFE0D2}
+  .tbl tbody td{padding:12px 6px;font-size:14px}
+  .tbl__note{font-size:10.5px}
+}
+
 /* ═══════════════ OPTIONS ═══════════════ */
 .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .opts li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 28px}
@@ -542,6 +567,30 @@ table{border-collapse:collapse;width:100%}
 .wgrid img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
 .wgrid figure:hover img{transform:scale(1.05)}
 .wgrid figcaption{padding:9px 4px 12px;font-size:12px;font-weight:500;color:var(--ink-mid)}
+
+/* ═══════════════ WORKS（密なグリッド） ═══════════════ */
+#works{padding-top:74px;padding-bottom:74px}
+#works .head{margin-bottom:36px}
+.wgal{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.wgal li{border-radius:14px;overflow:hidden;background:#fff}
+.wgal img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.wgal li:hover img{transform:scale(1.06)}
+.wgal span{display:block;padding:9px 10px 11px;font-size:11.5px;font-weight:700;line-height:1.4}
+.wgal em{display:block;font-style:normal;font-size:10.5px;font-weight:400;color:var(--ink-mid);margin-top:2px}
+.wsum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.wsum div{background:#fff;border-radius:16px;padding:15px 18px}
+.wsum dt{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--coral);margin-bottom:5px}
+.wsum dd{font-size:18px;font-weight:900;line-height:1.35}
+.wsum div:last-child dd{font-size:12.5px;font-weight:500;color:var(--ink-mid);line-height:1.6}
+@media (max-width:1080px){
+  .wgal{grid-template-columns:repeat(4,1fr)}
+  .wsum{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .wgal{grid-template-columns:repeat(3,1fr);gap:8px}
+  .wgal span{padding:7px 8px 9px;font-size:10.5px}
+  .wgal em{display:none}
+}
 
 /* ═══════════════ FLOW ═══════════════ */
 .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -624,6 +673,7 @@ table{border-collapse:collapse;width:100%}
   .diag{grid-template-columns:1fr;gap:32px}
   .reno{grid-template-columns:repeat(2,1fr)}
   .scope{grid-template-columns:1fr}
+  .scope__opt ul{grid-template-columns:repeat(2,1fr)}
   .stup{grid-template-columns:repeat(2,1fr)}
   .fin{grid-template-columns:1fr}
   .plans{grid-template-columns:1fr;max-width:620px;margin-inline:auto}
@@ -662,6 +712,8 @@ table{border-collapse:collapse;width:100%}
   .stup{grid-template-columns:1fr}
   .scope{grid-template-columns:1fr}
   .scope__box{padding:28px 22px}
+  .scope__opt{padding:26px 22px}
+  .scope__opt ul{grid-template-columns:1fr}
   .roles__row > div{padding:13px 14px;font-size:13px}
   .roles__row--head > div{font-size:13px;padding:12px}
   .unfit{padding:26px 22px}
@@ -769,10 +821,7 @@ table{border-collapse:collapse;width:100%}
     <ul class="issues">
       <li><span class="n">01</span><h3>深夜の海外ゲストからの連絡が止まらない</h3><p>時差のある問い合わせ、チェックイン直前のトラブル。返答が遅れるほど評価は下がり、検索順位も落ちていきます。</p></li>
       <li><span class="n">02</span><h3>価格を動かせず、閑散期に埋まらない</h3><p>周辺の需給は毎日変わります。固定料金のままでは、繁忙期は取りこぼし、閑散期は空室が積み上がります。</p></li>
-      <li><span class="n">03</span><h3>清掃の手配と品質にばらつきが出る</h3><p>直前予約への対応、連泊明けのリネン。清掃品質はレビューに直結しますが、業者管理まで手が回りません。</p></li>
-      <li><span class="n">04</span><h3>近隣クレームとゴミ出しが精神的に重い</h3><p>騒音、ゴミの分別、共用部の使い方。近隣との関係悪化は、営業許可そのものを揺るがすリスクになります。</p></li>
-      <li><span class="n">05</span><h3>Airbnb1媒体だけで、露出が頭打ち</h3><p>他のOTAに広げれば母数は増えますが、在庫と料金の整合を手作業で保つのは現実的ではありません。</p></li>
-      <li><span class="n">06</span><h3>「何が利益を削っているのか」が見えない</h3><p>OTA手数料、チェックインシステム、清掃費。小規模施設ほど固定費の比率は重く、そして見えづらいままになります。</p></li>
+      <li><span class="n">03</span><h3>「何が利益を削っているのか」が見えない</h3><p>OTA手数料、チェックインシステム、清掃費。小規模施設ほど固定費の比率は重く、そして見えづらいままになります。</p></li>
     </ul>
     <p class="bridge">これらをまとめて引き受けるのが<br><span class="g">AirStay 運営代行</span>です。</p>
   </div>
@@ -788,7 +837,7 @@ table{border-collapse:collapse;width:100%}
     </div>
 
     <div class="rblock">
-      <h3 class="rblock__label">都内型 旅館業（ワンルーム型・戸建一棟／計8棟）</h3>
+      <h3 class="rblock__label">都内型 旅館業（ワンルーム型・戸建一棟）</h3>
       <div class="rgrid rgrid--3">
         <div class="stat"><span class="cap">平均稼働率</span><b class="num">90<small>%</small></b></div>
         <div class="stat"><span class="cap">スーパーホスト獲得率</span><b class="num">88<small>%</small></b></div>
@@ -797,6 +846,7 @@ table{border-collapse:collapse;width:100%}
     </div>
 
     <p class="note-s">
+      ※ 対象は都内で運営する計8棟の平均値です。<br>
       ※ 実績値であり、将来の成果を保証するものではありません。物件の立地・規模・投資額により結果は変動します。
     </p>
   </div>
@@ -859,7 +909,7 @@ table{border-collapse:collapse;width:100%}
           <li><b>月次レポート</b><span>稼働率・ADR・RevPAR・売上の推移と改善提案を毎月お届けします</span></li>
           <li><b>四半期の収益改善提案</b><span>価格戦略の見直し、設備投資のROI試算、コストダウン施策</span></li>
         </ul>
-        <div class="plan__excl"><b>対象外</b>電話対応／現地駆けつけ</div>
+        <div class="plan__excl"><b>対象外</b>電話対応／現地駆けつけ<i>（オプションで承ります）</i></div>
         <div class="plan__btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--coral">このプランを相談する</a></div>
       </article>
 
@@ -888,13 +938,11 @@ table{border-collapse:collapse;width:100%}
 
         <ul class="plan__list">
           <li class="is-inherit"><b>ミドルプランの全業務</b><span>上記すべてを含みます</span></li>
-          <li><b>現地駆けつけ対応</b><span>鍵・設備トラブルの一次対応として現地へ急行<i>（対応エリア・回数条件は個別にご相談）</i></span></li>
           <li><b>小修繕・設備点検の手配</b><span>不具合の切り分けから業者手配・立会いまで<i>（工事費は実費）</i></span></li>
           <li><b>行政対応の窓口代行</b><span>消防・保健所の立入検査 立会い、許認可の変更届サポート</span></li>
           <li><b>専任担当者アサイン</b><span>物件を理解した担当者が一貫して対応します</span></li>
           <li><b>年次メンテナンス計画・改装提案</b><span>投資回収を見据えた改装・設備更新をご提案</span></li>
         </ul>
-        <div class="plan__note"><b>現地駆けつけについて</b>東京23区を対象に対応体制を構築中です。開始時期・対応エリアは個別にご案内いたします。フルプランは<b>先行ご相談を受付中</b>です。</div>
         <div class="plan__btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--outline">このプランを相談する</a></div>
       </article>
     </div>
@@ -922,6 +970,7 @@ table{border-collapse:collapse;width:100%}
       <span class="eyebrow">COMPARISON</span>
       <h2 class="h2">業務範囲の比較</h2>
     </div>
+    <p class="tbl__hint" aria-hidden="true">横にスクロールできます →</p>
     <div class="tscroll">
       <table class="tbl">
         <thead>
@@ -953,7 +1002,7 @@ table{border-collapse:collapse;width:100%}
           <tr><th>清掃・リネンのスケジュール管理／品質チェック</th><td>△</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
           <tr><th>備品・消耗品の在庫管理・発注代行</th><td>−</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
           <tr><th>近隣クレーム・ゴミ出しの窓口代行</th><td>−</td><td class="yes is-reco">●</td><td class="yes">●</td></tr>
-          <tr class="hl"><th>現地駆けつけ対応</th><td>−</td><td class="is-reco">−</td><td>△</td></tr>
+          <tr><th>現地駆けつけ対応<em class="tbl__note">※オプション</em></th><td>△</td><td class="is-reco">△</td><td>△</td></tr>
           <tr><th>小修繕・設備点検の手配</th><td>−</td><td class="is-reco">−</td><td class="yes">●</td></tr>
           <tr><th>消防・保健所の立入検査 立会い</th><td>−</td><td class="is-reco">−</td><td class="yes">●</td></tr>
           <tr><th>専任担当者アサイン</th><td>−</td><td class="is-reco">−</td><td class="yes">●</td></tr>
@@ -978,7 +1027,6 @@ table{border-collapse:collapse;width:100%}
     <div class="head">
       <span class="eyebrow">SCOPE</span>
       <h2 class="h2">できることと、<br>できないこと。</h2>
-      <p class="lead">「なんでもやります」とは申し上げません。<b>引き受ける範囲と、引き受けない範囲を先にはっきりさせる</b>ほうが、結果的にうまくいくと考えています。</p>
     </div>
 
     <div class="scope">
@@ -1000,11 +1048,23 @@ table{border-collapse:collapse;width:100%}
         <ul>
           <li>清掃・リネン交換の実作業<span>手配と品質管理はミドル以上で対応しますが、作業自体は提携業者が行い、費用は実費です</span></li>
           <li>22時以降の電話対応<span>フルプランの電話窓口も日中帯です。深夜の緊急連絡はオーナー様にお繋ぎします</span></li>
-          <li>現地への駆けつけ<span>東京23区で体制を構築中です。現時点ではお約束できません</span></li>
-          <li>内装改装・開業支援<span>準備中のため、現在は運営代行のみのご提供です</span></li>
-          <li>資金調達・融資<span>当社は貸金業者ではありません</span></li>
+          <li>設備の修繕・修理そのもの<span>不具合の切り分けと業者手配は行いますが、工事は施工業者が実施し、費用は実費です</span></li>
+          <li>資金の貸付<span>当社は貸金業者ではありません。資金調達はオプションで提携パートナーをご紹介する形です</span></li>
         </ul>
       </div>
+    </div>
+
+<div class="scope__opt">
+      <h3>オプションで選べること</h3>
+      <p>プランには含まれませんが、ご要望に応じて個別にお見積りします。物件の状況によりお受けできない場合があります。</p>
+      <ul>
+        <li><b>ハウスキーピング</b><span>清掃・リネンの手配と品質管理（ライトプランに追加する場合）</span></li>
+        <li><b>内装改装・インテリア</b><span>単価を上げるための改装。定款に内装仕上工事業を掲げています</span></li>
+        <li><b>現地駆けつけ対応</b><span>鍵・設備トラブルの一次対応。対応エリアと回数は個別にご相談</span></li>
+        <li><b>開業支援</b><span>フィジビリティ調査・許可取得・設計施工・初期設営</span></li>
+        <li><b>資金調達のご相談</b><span>提携パートナーのご紹介。当社が融資を行うものではありません</span></li>
+        <li><b>プロカメラマンによる撮影</b><span>掲載写真の撮り直し。稼働率に直結します</span></li>
+      </ul>
     </div>
 
     <div class="roles">
@@ -1048,7 +1108,7 @@ table{border-collapse:collapse;width:100%}
       <li><h3>スマートロック・チェックインシステム導入</h3><p>無人チェックインの設計から機器選定・設置・運用設計まで一貫して対応します。</p></li>
       <li><h3>防犯カメラ・騒音検知の設置</h3><p>近隣トラブルとパーティー利用を未然に防ぐ設備を、コストを抑えて導入します。</p></li>
       <li><h3>業務システムの構築</h3><p>予約・清掃・在庫の管理を自社ツールで効率化。ITコンサルティングの知見を活かします。</p></li>
-      <li><h3>物件取得前のフィージビリティ調査</h3><p>購入・賃借を検討中の物件について、許可の取りやすさと収益見込みを事前に精査します。</p></li>
+      <li><h3>物件取得前のフィジビリティ調査</h3><p>購入・賃借を検討中の物件について、許可の取りやすさと収益見込みを事前に精査します。</p></li>
     </ul>
   </div>
 </section>
@@ -1092,9 +1152,9 @@ table{border-collapse:collapse;width:100%}
         <table class="sim__tbl">
           <tbody>
             <tr><th>OTA売上（合計）</th><td id="sim-gross">—</td></tr>
-            <tr class="minus"><th>OTA手数料（約3%）</th><td id="sim-ota">—</td></tr>
+            <tr class="minus"><th>OTA手数料（約15.5%）</th><td id="sim-ota">—</td></tr>
             <tr class="sub"><th>OTA入金額</th><td id="sim-net">—</td></tr>
-            <tr class="minus"><th>やどり 運営手数料<em id="sim-ratelabel">（16%）</em></th><td id="sim-fee">—</td></tr>
+            <tr class="minus"><th>AirStay 運営手数料<em id="sim-ratelabel">（16%）</em></th><td id="sim-fee">—</td></tr>
             <tr class="total"><th>手数料控除後</th><td id="sim-after">—</td></tr>
           </tbody>
         </table>
@@ -1105,11 +1165,11 @@ table{border-collapse:collapse;width:100%}
         </div>
         <ul class="sim__legend">
           <li><i class="seg-ota"></i>OTA手数料</li>
-          <li><i class="seg-fee"></i>やどり手数料 <b id="sim-share">—</b></li>
+          <li><i class="seg-fee"></i>AirStay手数料 <b id="sim-share">—</b></li>
           <li><i class="seg-own"></i>オーナー様 <b id="sim-ownshare">—</b></li>
         </ul>
         <p class="sim__note" id="sim-minnote"></p>
-        <p class="sim__note">※ 手数料控除後の金額から、水道光熱費・清掃費・備品費・保険料等を差し引いた額が最終的な手取りとなります。あくまで概算であり、実際の金額をお約束するものではありません。</p>
+        <p class="sim__note">※ OTA手数料は媒体・プランにより変動します（ここでは15.5%で試算）。手数料控除後の金額から、水道光熱費・清掃費・備品費・保険料等を差し引いた額が最終的な手取りとなります。あくまで概算であり、実際の金額をお約束するものではありません。</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--coral btn--full sim__cta">この条件で詳しく試算してもらう <span>→</span></a>
       </div>
     </div>
@@ -1120,7 +1180,7 @@ table{border-collapse:collapse;width:100%}
 <section class="sec sec--tint" id="why">
   <div class="inner">
     <div class="head">
-      <span class="eyebrow">WHY YADORI</span>
+      <span class="eyebrow">WHY AIRSTAY</span>
       <h2 class="h2">運営代行会社であり、<br>つくり手でもある。</h2>
     </div>
     <div class="why">
@@ -1144,7 +1204,7 @@ table{border-collapse:collapse;width:100%}
         <li>
           <span class="n">04</span>
           <h3>ITの力で、運営コストそのものを下げる</h3>
-          <p>やどりはITコンサルティングも本業としています。チェックインシステム、清掃手配、在庫管理。人手でこなしている業務を仕組みに置き換えることで、手数料以上の削減を生み出します。</p>
+          <p>AirStay を運営する合同会社やどりは、ITコンサルティングも本業としています。チェックインシステム、清掃手配、在庫管理。人手でこなしている業務を仕組みに置き換えることで、手数料以上の削減を生み出します。</p>
         </li>
         <li>
           <span class="n">05</span>
@@ -1154,82 +1214,16 @@ table{border-collapse:collapse;width:100%}
         <li>
           <span class="n">06</span>
           <h3>立ち上げて終わりにしない</h3>
-          <p>運営も改善も、開業後こそ本番です。月次で数字を突き合わせ、稼働率と単価の両方を押し上げ続けます。長く寄り添うパートナーであり続けることが、やどりの姿勢です。</p>
+          <p>運営も改善も、開業後こそ本番です。月次で数字を突き合わせ、稼働率と単価の両方を押し上げ続けます。長く寄り添うパートナーであり続けることが、AirStay の姿勢です。</p>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ WORKS ═══════════ -->
-<section class="sec" id="works">
-  <div class="inner">
-    <div class="head">
-      <span class="eyebrow">WORKS</span>
-      <h2 class="h2">これまで手がけた施設</h2>
-    </div>
-
-    <div class="works">
-      <div class="wrow">
-        <div class="wrow__meta">
-          <span class="tag">都内型 旅館業</span>
-          <h3>受託 6棟／自社 3棟</h3>
-          <dl>
-            <div><dt>Location</dt><dd>東京都 大田区・新宿区・杉並区・世田谷区・目黒区</dd></div>
-            <div><dt>Scope</dt><dd>許認可取得／設計／施工／初期設営／運営</dd></div>
-            <div><dt>Since</dt><dd>2024年2月</dd></div>
-          </dl>
-          <p>戸建一棟のリノベーションからワンルーム型まで。申請から運営までを通しで手がけています。</p>
-        </div>
-        <div class="wgrid">
-          <figure><img src="assets/img/tokyo-01.jpg" alt="東京都大田区の受託物件 リビングダイニング" loading="lazy"><figcaption>東京都大田区</figcaption></figure>
-          <figure><img src="assets/img/tokyo-02.jpg" alt="東京都新宿区の受託物件 客室" loading="lazy"><figcaption>東京都新宿区</figcaption></figure>
-          <figure><img src="assets/img/tokyo-03.jpg" alt="東京都杉並区の受託物件 内装" loading="lazy"><figcaption>東京都杉並区</figcaption></figure>
-          <figure><img src="assets/img/tokyo-04.jpg" alt="東京都大田区の自社物件 客室" loading="lazy"><figcaption>東京都大田区</figcaption></figure>
-          <figure><img src="assets/img/tokyo-05.jpg" alt="東京都世田谷区の自社物件 2段ベッド" loading="lazy"><figcaption>東京都世田谷区</figcaption></figure>
-        </div>
-      </div>
-
-      <div class="wrow">
-        <div class="wrow__meta">
-          <span class="tag">一棟貸し 古民家ホテル</span>
-          <h3>tokoro hotel Isumi</h3>
-          <dl>
-            <div><dt>Location</dt><dd>千葉県いすみ市</dd></div>
-            <div><dt>Scope</dt><dd>設計・施工・運営</dd></div>
-            <div><dt>Year</dt><dd>2024年4月 開業</dd></div>
-          </dl>
-          <p>平均稼働率72%、公式サイト経由55%。OTA依存から抜け出した直販比率を実現しています。</p>
-        </div>
-        <div class="wgrid wgrid--2">
-          <figure><img src="assets/img/isumi-01.jpg" alt="tokoro hotel Isumi 外観" loading="lazy"><figcaption>外観</figcaption></figure>
-          <figure><img src="assets/img/isumi-02.jpg" alt="tokoro hotel Isumi デッキテラス" loading="lazy"><figcaption>デッキテラス</figcaption></figure>
-        </div>
-      </div>
-
-      <div class="wrow">
-        <div class="wrow__meta">
-          <span class="tag">一棟貸し 古民家ホテル</span>
-          <h3>tokoro hotel JUJI</h3>
-          <dl>
-            <div><dt>Location</dt><dd>千葉県市原市</dd></div>
-            <div><dt>Scope</dt><dd>設計・施工・運営</dd></div>
-            <div><dt>Year</dt><dd>2026年4月 開業</dd></div>
-          </dl>
-          <p>本格的なサウナを備えた一棟貸し。滞在の目的そのものをつくることで単価を引き上げます。</p>
-        </div>
-        <div class="wgrid">
-          <figure><img src="assets/img/juji-01.jpg" alt="tokoro hotel JUJI 外観" loading="lazy"><figcaption>外観</figcaption></figure>
-          <figure><img src="assets/img/juji-02.jpg" alt="tokoro hotel JUJI ダイニング" loading="lazy"><figcaption>ダイニング</figcaption></figure>
-          <figure><img src="assets/img/juji-03.jpg" alt="tokoro hotel JUJI サウナ" loading="lazy"><figcaption>サウナ</figcaption></figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════ FLOW ═══════════ -->
-<section class="sec sec--tint" id="flow">
+<section class="sec" id="flow">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">FLOW</span>
@@ -1248,7 +1242,7 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ AirStay 稼働率診断 ═══════════ -->
-<section class="sec" id="diagnosis">
+<section class="sec sec--tint" id="diagnosis">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">AIRSTAY 稼働率診断</span>
@@ -1307,7 +1301,7 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ FAQ ═══════════ -->
-<section class="sec sec--tint sec--narrow" id="faq">
+<section class="sec sec--narrow" id="faq">
   <div class="inner" style="max-width:860px;margin:0 auto">
     <div class="head">
       <span class="eyebrow">FAQ</span>
@@ -1318,7 +1312,7 @@ table{border-collapse:collapse;width:100%}
       <details><summary>内装改装や開業支援もお願いできますか？</summary><div><p>現在は<b>運営代行のみのご提供</b>です。内装改装と開業支援は準備中で、時期が決まり次第あらためてご案内します。合同会社やどりは定款に内装仕上工事業を掲げており、提供を開始した際は運営と一体でお引き受けする予定です。それまでは運営面の改善に集中させていただきます。</p></div></details>
       <details><summary>依頼すれば必ず稼働率は上がりますか？</summary><div><p>お約束はできません。診断でお示しするのは現況データと競合比較にもとづく試算であり、実際の結果は立地・季節・市況・競合の動きによって変動します。伸びしろが小さいと判断した場合は、その旨を無料診断の段階で正直にお伝えします。</p></div></details>
       <details><summary>手数料はどのタイミングで発生しますか？</summary><div><p>各予約サイトからご入金があった実績に対して、翌月にご請求します。売上が発生しない月は手数料もいただきません（最低手数料は稼働のある月に適用されます）。</p></div></details>
-      <details><summary>最低手数料はどのような場合に適用されますか？</summary><div><p>算出した手数料が最低額を下回った場合に、最低額を適用します。たとえばライトプランで月商20万円の場合、料率計算では約19,400円ですが、最低額の30,000円をご請求します。月商31万円以上であれば、実質的に料率のみのご負担です。</p></div></details>
+      <details><summary>最低手数料はどのような場合に適用されますか？</summary><div><p>算出した手数料が最低額を下回った場合に、最低額を適用します。たとえばライトプランで月商20万円の場合、料率計算では約16,900円ですが、最低額の30,000円をご請求します。月商36万円以上であれば、実質的に料率のみのご負担です。</p></div></details>
       <details><summary>清掃はどのように扱われますか？</summary><div><p>ミドル・フルプランでは、清掃とリネンの手配・スケジュール管理・品質チェック・クレーム対応を当社が請け負います。清掃そのものの費用は間取り・面積・稼働・リネン枚数から個別にお見積りし、実施分をご請求します。ライトプランでもオプションとして追加いただけます。</p></div></details>
       <details><summary>すでにAirbnbで自主運営しています。途中から引き継げますか？</summary><div><p>可能です。既存のリスティング、レビュー、スーパーホストのステータスを維持したまま運営を引き継ぎます。すでに予約が入っている分についても、そのまま対応を承ります。</p></div></details>
       <details><summary>住宅宿泊事業法（民泊新法）の物件でも依頼できますか？</summary><div><p>物件が旅館業法の簡易宿所営業か、住宅宿泊事業法の届出住宅かによって、委託できる業務の範囲や必要な登録が異なります。まずは許可・届出の種別をお知らせください。物件の状況に応じて、適法に受託できる形をご提案します。</p></div></details>
@@ -1330,24 +1324,42 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<!-- ═══════════ 今後の展開 ═══════════ -->
-<section class="sec" id="roadmap">
-  <div class="inner" style="max-width:1000px;margin:0 auto">
-    <div class="future">
-      <span class="eyebrow">ROADMAP</span>
-      <h3>今後、提供を予定しているサービス</h3>
-      <p>現在お引き受けしているのは<b>運営代行のみ</b>です。以下は準備中で、提供開始が決まり次第ご案内します。現時点ではお約束できないため、あえて詳細は載せていません。</p>
-      <ul>
-        <li><b>AirStay 施設改善</b><span>インテリア・内装改装・差別化設備の導入</span></li>
-        <li><b>AirStay 開業支援</b><span>物件調査・許可取得・設計施工・初期設営</span></li>
-        <li><b>現地駆けつけ対応</b><span>東京23区を対象に体制構築中</span></li>
-      </ul>
+
+<!-- ═══════════ WORKS ═══════════ -->
+<section class="sec sec--tint" id="works">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">WORKS</span>
+      <h2 class="h2">これまで手がけた施設</h2>
+      <p class="lead">都内の受託・自社運営を中心に、許認可取得から設計施工、初期設営、日々の運営まで通しで手がけてきました。</p>
     </div>
+
+    <ul class="wgal">
+      <li><img src="assets/img/tokyo-01.jpg" alt="東京都大田区の受託物件" loading="lazy"><span>東京都大田区<em>受託／設計・施工・運営</em></span></li>
+      <li><img src="assets/img/tokyo-02.jpg" alt="東京都新宿区の受託物件" loading="lazy"><span>東京都新宿区<em>受託／許認可・設計・施工</em></span></li>
+      <li><img src="assets/img/tokyo-03.jpg" alt="東京都杉並区の受託物件" loading="lazy"><span>東京都杉並区<em>受託／設計・施工・運営</em></span></li>
+      <li><img src="assets/img/tokyo-04.jpg" alt="東京都大田区の自社物件" loading="lazy"><span>東京都大田区<em>自社／申請から運営まで</em></span></li>
+      <li><img src="assets/img/tokyo-05.jpg" alt="東京都世田谷区の自社物件" loading="lazy"><span>東京都世田谷区<em>自社／申請から運営まで</em></span></li>
+      <li><img src="assets/img/isumi-01.jpg" alt="千葉県いすみ市の一棟貸し古民家ホテル 外観" loading="lazy"><span>千葉県いすみ市<em>一棟貸し／設計・施工・運営</em></span></li>
+      <li><img src="assets/img/isumi-02.jpg" alt="千葉県いすみ市の一棟貸し古民家ホテル デッキ" loading="lazy"><span>千葉県いすみ市<em>一棟貸し／デッキテラス</em></span></li>
+      <li><img src="assets/img/juji-01.jpg" alt="千葉県市原市の一棟貸し古民家ホテル 外観" loading="lazy"><span>千葉県市原市<em>一棟貸し／設計・施工・運営</em></span></li>
+      <li><img src="assets/img/juji-02.jpg" alt="千葉県市原市の一棟貸し古民家ホテル ダイニング" loading="lazy"><span>千葉県市原市<em>一棟貸し／ダイニング</em></span></li>
+      <li><img src="assets/img/juji-03.jpg" alt="千葉県市原市の一棟貸し古民家ホテル サウナ" loading="lazy"><span>千葉県市原市<em>一棟貸し／サウナ</em></span></li>
+      <li><img src="assets/img/hero.jpg" alt="設計から手がけた客室" loading="lazy"><span>客室ディレクション<em>設計・スタイリング</em></span></li>
+      <li><img src="assets/img/philosophy.jpg" alt="和室の内装" loading="lazy"><span>内装ディレクション<em>設計・スタイリング</em></span></li>
+    </ul>
+
+    <dl class="wsum">
+      <div><dt>都内 受託</dt><dd>6棟</dd></div>
+      <div><dt>都内 自社</dt><dd>3棟</dd></div>
+      <div><dt>一棟貸し</dt><dd>2棟</dd></div>
+      <div><dt>対応領域</dt><dd>許認可・設計・施工・初期設営・運営</dd></div>
+    </dl>
   </div>
 </section>
 
 <!-- ═══════════ COMPANY ═══════════ -->
-<section class="sec sec--tint sec--narrow" id="company">
+<section class="sec sec--narrow" id="company">
   <div class="inner" style="max-width:860px;margin:0 auto">
     <div class="head">
       <span class="eyebrow">COMPANY</span>
@@ -1494,7 +1506,7 @@ table{border-collapse:collapse;width:100%}
   var revIn = document.getElementById('sim-rev');
   if(!revIn) return;
 
-  var OTA_RATE = 0.03;
+  var OTA_RATE = 0.155;
   var DISCOUNT = { 1:0, 3:1, 5:2 };
 
   var el = {

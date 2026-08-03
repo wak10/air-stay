@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AirStay | 宿泊施設の稼働率改善・運営代行・施設改善・開業支援</title>
-<meta name="description" content="AirStayは宿泊施設の稼働率を上げるためのサービス群です。無料の稼働率診断で原因が運営か建物かを切り分け、運営代行（手数料10%〜）、施設改善（インテリア・内装工事）、開業支援まで窓口ひとつで。運営：合同会社やどり。">
-<meta property="og:title" content="AirStay | 宿泊施設の稼働率を、原因から上げる">
-<meta property="og:description" content="その稼働率、原因は運営ですか。それとも、建物ですか。稼働率診断・運営代行・施設改善・開業支援を、AirStayが窓口ひとつでお引き受けします。">
+<title>AirStay | 東京の民泊・簡易宿所に特化した運営代行（手数料10%〜）</title>
+<meta name="description" content="東京の民泊・簡易宿所に特化した運営代行。掲載・価格・ゲスト対応から清掃管理・英語電話対応まで、手放したい範囲で選べる3プラン。手数料10%〜、初期設定費用は1棟目0円（設置物品を除く）。無料の稼働率診断から。運営：合同会社やどり。">
+<meta property="og:title" content="AirStay | 宿泊施設の運営代行（手数料10%〜）">
+<meta property="og:description" content="オーナー様の手を離れても、稼働率は落ちない。東京の民泊・簡易宿所に特化した運営代行。手数料10%〜、初期設定費用は1棟目0円。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://airstay.yadori-llc.com/assets/img/tokyo-04.jpg">
 <meta property="og:url" content="https://airstay.yadori-llc.com/">
@@ -22,8 +22,8 @@
   "@type": "Service",
   "name": "AirStay",
   "alternateName": "宿泊施設の稼働率改善サービス",
-  "serviceType": "宿泊施設の稼働率診断・運営代行・施設改善・開業支援",
-  "description": "稼働率が上がらない原因が運営にあるのか建物にあるのかを切り分け、運営代行・施設改善・開業支援を一つの窓口で提供するサービス群。",
+  "serviceType": "宿泊施設の運営代行・稼働率診断",
+  "description": "東京の民泊・簡易宿所に特化した運営代行。掲載・価格・ゲスト対応・清掃管理を、手放したい範囲に応じた3プランで提供する。",
   "areaServed": { "@type": "AdministrativeArea", "name": "東京都" },
   "provider": {
     "@type": "Organization",
@@ -300,7 +300,38 @@ table{border-collapse:collapse;width:100%}
 .reno__scope dl dd{font-size:13.5px;font-weight:400;line-height:1.9;color:var(--ink-mid)}
 .reno__scope dl dd b{color:var(--ink);font-weight:700}
 
-/* ═══════════════ STARTUP（開業支援） ═══════════════ */
+/* ═══════════════ SCOPE（できないこと・役割分担） ═══════════════ */
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.scope__box{border-radius:24px;padding:36px 34px}
+.scope__box--can{background:#fff;border:2px solid var(--coral)}
+.scope__box--cant{background:var(--tint-2);border:1px solid var(--line)}
+.scope__box h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.scope__box > p{font-size:13px;font-weight:500;color:var(--ink-mid);margin-bottom:20px}
+.scope__box ul{display:flex;flex-direction:column;gap:12px}
+.scope__box li{font-size:14.5px;font-weight:500;line-height:1.7;padding-left:30px;position:relative}
+.scope__box li span{display:block;font-size:12.5px;font-weight:400;color:var(--ink-mid);margin-top:3px}
+.scope__box--can li::before{
+  content:"";position:absolute;left:4px;top:6px;width:13px;height:8px;
+  border-left:2.5px solid var(--coral);border-bottom:2.5px solid var(--coral);transform:rotate(-45deg);
+}
+.scope__box--cant li::before{
+  content:"";position:absolute;left:4px;top:11px;width:14px;height:2px;background:var(--ink-soft);
+}
+.roles{margin-top:22px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
+.roles__row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.roles__row:last-child{border-bottom:none}
+.roles__row--head > div{background:var(--ink);color:#fff;font-weight:900;font-size:14px;text-align:center;padding:15px}
+.roles__row--head > div:first-child{background:var(--grad-btn)}
+.roles__row > div{padding:16px 22px;font-size:14px;font-weight:500;line-height:1.7}
+.roles__row > div:first-child{border-right:1px solid var(--line)}
+.roles__row > div:last-child{color:var(--ink-mid)}
+.unfit{margin-top:22px;background:var(--tint);border-radius:24px;padding:30px 34px}
+.unfit h3{font-size:18px;font-weight:900;margin-bottom:14px}
+.unfit ul{display:flex;flex-wrap:wrap;gap:10px}
+.unfit li{font-size:13.5px;font-weight:500;background:#fff;border-radius:100px;padding:9px 18px;color:var(--ink-mid)}
+.unfit p{margin-top:16px;font-size:13px;font-weight:400;line-height:1.85;color:var(--ink-mid)}
+
+/* ═══════════════ STARTUP（開業支援・未使用） ═══════════════ */
 .stup{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
 .stup li{
   background:#fff;border:1px solid var(--line);border-radius:20px;
@@ -317,7 +348,21 @@ table{border-collapse:collapse;width:100%}
   margin-top:auto;padding-top:16px;font-size:11.5px;font-weight:700;color:var(--coral);
 }
 
-/* ═══════════════ FINANCE ═══════════════ */
+/* ═══════════════ ROADMAP（今後の展開） ═══════════════ */
+.future{background:#fff;border:1px dashed var(--line);border-radius:24px;padding:40px 38px}
+.future h3{font-size:22px;font-weight:900;margin:14px 0 12px}
+.future > p{font-size:14px;font-weight:400;line-height:1.95;color:var(--ink-mid);margin-bottom:24px;max-width:70ch}
+.future > p b{color:var(--ink);font-weight:700}
+.future ul{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.future li{background:var(--tint-2);border-radius:16px;padding:20px 22px}
+.future li b{display:block;font-size:15px;font-weight:900;color:var(--ink-soft);margin-bottom:6px}
+.future li span{font-size:12.5px;font-weight:400;line-height:1.75;color:var(--ink-mid)}
+@media (max-width:768px){
+  .future{padding:28px 22px}
+  .future ul{grid-template-columns:1fr}
+}
+
+/* ═══════════════ FINANCE（未使用） ═══════════════ */
 .fin{
   background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px 38px;
   display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;
@@ -578,6 +623,7 @@ table{border-collapse:collapse;width:100%}
   }
   .diag{grid-template-columns:1fr;gap:32px}
   .reno{grid-template-columns:repeat(2,1fr)}
+  .scope{grid-template-columns:1fr}
   .stup{grid-template-columns:repeat(2,1fr)}
   .fin{grid-template-columns:1fr}
   .plans{grid-template-columns:1fr;max-width:620px;margin-inline:auto}
@@ -614,6 +660,11 @@ table{border-collapse:collapse;width:100%}
   .diag__spec div{grid-template-columns:1fr;gap:3px}
   .reno{grid-template-columns:1fr}
   .stup{grid-template-columns:1fr}
+  .scope{grid-template-columns:1fr}
+  .scope__box{padding:28px 22px}
+  .roles__row > div{padding:13px 14px;font-size:13px}
+  .roles__row--head > div{font-size:13px;padding:12px}
+  .unfit{padding:26px 22px}
   .reno__scope{grid-template-columns:1fr;padding:26px 22px}
   .fin{padding:28px 22px}
   .rgrid,.rgrid--3{grid-template-columns:repeat(2,1fr);gap:24px 16px}
@@ -653,6 +704,7 @@ table{border-collapse:collapse;width:100%}
   <div class="pc-nav">
     <a href="#plans">料金プラン</a>
     <a href="#compare">業務範囲</a>
+    <a href="#scope">対応範囲</a>
     <a href="#simulator">収益シミュレーション</a>
     <a href="#works">実績</a>
     <a href="#diagnosis">無料診断</a>
@@ -674,9 +726,7 @@ table{border-collapse:collapse;width:100%}
     <a href="#works">実績</a>
     <a href="#flow">導入の流れ</a>
     <a href="#diagnosis">無料 稼働率診断</a>
-    <a href="#renovation">施設改善</a>
-    <a href="#startup">開業支援</a>
-    <a href="#finance">資金のご相談</a>
+    <a href="#scope">できること／できないこと</a>
     <a href="#faq">よくあるご質問</a>
     <a href="https://yadori-llc.com/">運営会社（やどり）↗</a>
     <a class="mm-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener">お問い合わせ</a>
@@ -691,8 +741,7 @@ table{border-collapse:collapse;width:100%}
   <p class="phero__lead">
     掲載・価格・ゲスト対応から、清掃管理・英語での電話対応まで。
     「どこまで手放したいか」で選べる<b>3つのプラン</b>をご用意しました。
-    手数料は10%から、初期設定費用は1棟目0円（設置物品は除く）。売上が立たない月に手数料は発生しません。
-    運営だけで届かないときは、内装改装や開業支援まで同じ窓口でお引き受けします。
+    売上が立たない月に、手数料は発生しません。
   </p>
   <div class="phero__cta">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn--coral">無料で稼働率診断を申し込む <span>→</span></a>
@@ -723,7 +772,7 @@ table{border-collapse:collapse;width:100%}
       <li><span class="n">03</span><h3>清掃の手配と品質にばらつきが出る</h3><p>直前予約への対応、連泊明けのリネン。清掃品質はレビューに直結しますが、業者管理まで手が回りません。</p></li>
       <li><span class="n">04</span><h3>近隣クレームとゴミ出しが精神的に重い</h3><p>騒音、ゴミの分別、共用部の使い方。近隣との関係悪化は、営業許可そのものを揺るがすリスクになります。</p></li>
       <li><span class="n">05</span><h3>Airbnb1媒体だけで、露出が頭打ち</h3><p>他のOTAに広げれば母数は増えますが、在庫と料金の整合を手作業で保つのは現実的ではありません。</p></li>
-      <li><span class="n">06</span><h3>内装の古さがレビューで指摘されている</h3><p>水回り、壁、照明。運営でカバーできる範囲を超えると評価は下がり続けます。この場合だけは建物側の対応が要ります。</p></li>
+      <li><span class="n">06</span><h3>「何が利益を削っているのか」が見えない</h3><p>OTA手数料、チェックインシステム、清掃費。小規模施設ほど固定費の比率は重く、そして見えづらいままになります。</p></li>
     </ul>
     <p class="bridge">これらをまとめて引き受けるのが<br><span class="g">AirStay 運営代行</span>です。</p>
   </div>
@@ -923,8 +972,66 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
+<!-- ═══════════ SCOPE ─ できること／できないこと ═══════════ -->
+<section class="sec" id="scope">
+  <div class="inner">
+    <div class="head">
+      <span class="eyebrow">SCOPE</span>
+      <h2 class="h2">できることと、<br>できないこと。</h2>
+      <p class="lead">「なんでもやります」とは申し上げません。<b>引き受ける範囲と、引き受けない範囲を先にはっきりさせる</b>ほうが、結果的にうまくいくと考えています。</p>
+    </div>
+
+    <div class="scope">
+      <div class="scope__box scope__box--can">
+        <h3>AirStay がやること</h3>
+        <p>すべてのプランに共通する中核業務です。</p>
+        <ul>
+          <li>OTAへの掲載と最適化<span>掲載文・写真の順序・ハウスルール・検索対策</span></li>
+          <li>価格の自動調整<span>PriceLabsで需給に連動、月次でチューニング</span></li>
+          <li>ゲスト対応（日本語・英語）<span>8:00〜22:00。予約前後の問い合わせからトラブル一次対応まで</span></li>
+          <li>レビュー管理と損害請求<span>投稿代行、低評価のリカバリー、AirCover等の申請</span></li>
+          <li>宿泊者名簿の回収・管理<span>旅館業法に基づく取得と保管</span></li>
+        </ul>
+      </div>
+
+      <div class="scope__box scope__box--cant">
+        <h3>AirStay がやらないこと</h3>
+        <p>以下はお引き受けしていません。ご契約前にご確認ください。</p>
+        <ul>
+          <li>清掃・リネン交換の実作業<span>手配と品質管理はミドル以上で対応しますが、作業自体は提携業者が行い、費用は実費です</span></li>
+          <li>22時以降の電話対応<span>フルプランの電話窓口も日中帯です。深夜の緊急連絡はオーナー様にお繋ぎします</span></li>
+          <li>現地への駆けつけ<span>東京23区で体制を構築中です。現時点ではお約束できません</span></li>
+          <li>内装改装・開業支援<span>準備中のため、現在は運営代行のみのご提供です</span></li>
+          <li>資金調達・融資<span>当社は貸金業者ではありません</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="roles">
+      <div class="roles__row roles__row--head"><div>AirStay</div><div>オーナー様</div></div>
+      <div class="roles__row"><div>掲載・価格・ゲスト対応・レビュー</div><div>物件と備品のご提供</div></div>
+      <div class="roles__row"><div>清掃業者の手配と品質チェック<br><em style="font-size:12px;color:var(--ink-soft)">※ミドル以上</em></div><div>清掃費・リネン費のご負担</div></div>
+      <div class="roles__row"><div>月次レポートと改善提案<br><em style="font-size:12px;color:var(--ink-soft)">※ミドル以上</em></div><div>水道光熱費・保険料のご負担</div></div>
+      <div class="roles__row"><div>OTA・システムの設定と運用</div><div>OTA手数料・システム利用料のご負担</div></div>
+      <div class="roles__row"><div>近隣クレームの一次対応<br><em style="font-size:12px;color:var(--ink-soft)">※ミドル以上</em></div><div>設備の修繕費のご負担</div></div>
+    </div>
+
+    <div class="unfit">
+      <h3>こういう場合は、他社様のほうが合うかもしれません</h3>
+      <ul>
+        <li>月商20万円を下回る見込みの施設</li>
+        <li>深夜帯の有人対応が必須の施設</li>
+        <li>清掃を含めて完全に丸投げしたい</li>
+        <li>東京以外で現地対応が必要な施設</li>
+        <li>手数料の安さだけで選びたい</li>
+      </ul>
+      <p>最低手数料があるため、月商が小さい施設では料率以上のご負担になります。無料の稼働率診断で試算しますので、合わないと判断した場合はその場でお伝えします。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ OPTIONS ═══════════ -->
-<section class="sec" id="options">
+<section class="sec sec--tint" id="options">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">OPTIONS</span>
@@ -947,7 +1054,7 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ SIMULATOR ═══════════ -->
-<section class="sec sec--tint" id="simulator">
+<section class="sec" id="simulator">
   <div class="inner sec--mid" style="max-width:1100px;margin:0 auto">
     <div class="head">
       <span class="eyebrow">SIMULATION</span>
@@ -1010,7 +1117,7 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ WHY ═══════════ -->
-<section class="sec" id="why">
+<section class="sec sec--tint" id="why">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">WHY YADORI</span>
@@ -1022,7 +1129,7 @@ table{border-collapse:collapse;width:100%}
         <li>
           <span class="n">01</span>
           <h3>運営とハード、どちらが原因かを切り分けられる</h3>
-          <p>運営代行会社は運営しか見ず、内装会社は建物しか見ません。許可申請から設計・施工、日々の運営までを通しで経験しているからこそ、「この間取りではADRが上がらない」「これは価格設定の問題だ」を分けて判断できます。AirStay の出発点はここです。</p>
+          <p>許可申請から設計・施工、日々の運営までを通しで経験してきました。だからこそ「この間取りではADRが上がらない」「これは価格設定の問題だ」を分けて判断できます。運営だけを見てきた代行会社との差はここに出ます。</p>
         </li>
         <li>
           <span class="n">02</span>
@@ -1041,8 +1148,8 @@ table{border-collapse:collapse;width:100%}
         </li>
         <li>
           <span class="n">05</span>
-          <h3>要らない改装は、要らないと言う</h3>
-          <p>工事を受注したい会社は改装を勧めます。私たちは運営でも稼げるため、運営改善で戻るなら「そのほうが早くて安い」と申し上げます。回収の見込みが立たない工事はおすすめしません。</p>
+          <h3>できないことは、できないと言う</h3>
+          <p>受注したいがために「なんでもできます」とは申し上げません。対応範囲を先に明示し、合わないと判断した場合は無料診断の段階でその旨をお伝えします。</p>
         </li>
         <li>
           <span class="n">06</span>
@@ -1055,7 +1162,7 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ WORKS ═══════════ -->
-<section class="sec sec--tint" id="works">
+<section class="sec" id="works">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">WORKS</span>
@@ -1122,26 +1229,26 @@ table{border-collapse:collapse;width:100%}
 </section>
 
 <!-- ═══════════ FLOW ═══════════ -->
-<section class="sec" id="flow">
+<section class="sec sec--tint" id="flow">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">FLOW</span>
       <h2 class="h2">お問い合わせから<br>着手までの流れ</h2>
-      <p class="lead">運営改善だけであれば、最短2週間で運営を開始できます。施設改善を伴う場合は、工事の規模に応じて別途スケジュールをご提示します。</p>
+      <p class="lead">お問い合わせから最短2週間で運営を開始できます。</p>
     </div>
     <ol class="flow">
       <li><span class="step">STEP 01</span><h3>お問い合わせ</h3><p>フォームまたはメールで。所要1分。現在の運営状況が分かる情報があるとスムーズです。</p><span class="time">1分</span></li>
       <li><span class="step">STEP 02</span><h3>ヒアリング</h3><p>オンライン30分。物件と現状の数字を伺います。管理画面のスクリーンショットをご用意いただけると精度が上がります。</p><span class="time">30分</span></li>
       <li><span class="step">STEP 03</span><h3>稼働率診断レポート</h3><p>競合ベンチマーク、原因の切り分け、改善余地の試算とロードマップをご提示します。<b>ここまで無料</b>です。</p><span class="time">3営業日</span></li>
-      <li><span class="step">STEP 04</span><h3>打ち手の選択とご契約</h3><p>運営改善のみか、施設改善も行うか。必要な範囲だけを選んでいただき、業務範囲と責任分担を明記した契約を締結します。</p><span class="time">1〜3日</span></li>
-      <li><span class="step">STEP 05</span><h3>着手</h3><p>運営改善はリスティング・価格・自動化・清掃体制の構築（1棟目は初期設定費用0円・設置物品は除く）。施設改善は設計と工程の確定から。</p><span class="time">1〜2週間</span></li>
-      <li><span class="step">STEP 06</span><h3>運営開始・月次レポート</h3><p>稼働率・ADR・RevPARの推移と改善提案を毎月お届けします。改装を行った場合は投資回収の進捗も併せて報告します。</p><span class="time">運用開始</span></li>
+      <li><span class="step">STEP 04</span><h3>プランの選択とご契約</h3><p>3プランから必要な範囲を選んでいただき、業務範囲と責任分担を明記した管理委託契約を締結します。</p><span class="time">1〜3日</span></li>
+      <li><span class="step">STEP 05</span><h3>初期設定</h3><p>リスティング作成、価格設定、自動化構築、清掃体制の設計。1棟目は初期設定費用0円です（設置物品は除く）。</p><span class="time">1〜2週間</span></li>
+      <li><span class="step">STEP 06</span><h3>運営開始・月次レポート</h3><p>稼働率・ADR・RevPARの推移と改善提案を毎月お届けします（ミドル以上）。</p><span class="time">運用開始</span></li>
     </ol>
   </div>
 </section>
 
 <!-- ═══════════ AirStay 稼働率診断 ═══════════ -->
-<section class="sec sec--tint" id="diagnosis">
+<section class="sec" id="diagnosis">
   <div class="inner">
     <div class="head">
       <span class="eyebrow">AIRSTAY 稼働率診断</span>
@@ -1199,188 +1306,8 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<!-- ═══════════ SPLIT ─ 原因の切り分け ═══════════ -->
-<section class="sec" id="split">
-  <div class="inner">
-    <div class="head">
-      <span class="eyebrow">WHEN OPERATION IS NOT ENOUGH</span>
-      <h2 class="h2">運営を尽くしても<br>届かないときは、建物です。</h2>
-      <p class="lead">ここまでは運営代行のお話です。ただ、稼働率が動かない原因が<b>建物側にある</b>ケースもあります。この場合、価格を下げても写真を撮り直しても数字は変わりません。AirStay は建物にも手を入れられるので、両方を診たうえでご提案します。</p>
-    </div>
-
-    <div class="split">
-      <div class="split__col split__col--soft">
-        <span class="split__tag">CASE A ─ 運営が原因</span>
-        <h3>建物は悪くないのに、<br>埋まっていない</h3>
-        <ul>
-          <li>周辺の需給に対して価格が固定されたまま</li>
-          <li>掲載文と写真の順序が検索に最適化されていない</li>
-          <li>返信の遅れでレビュー評価と検索順位が落ちている</li>
-          <li>Airbnb1媒体のみで、露出の母数が足りていない</li>
-        </ul>
-        <p>→ <b>運営代行だけで数字が戻る</b>ケース。改装費はかかりません。ご依頼の多くはこちらです。</p>
-      </div>
-
-      <div class="split__vs"><span>OR</span></div>
-
-      <div class="split__col split__col--hard">
-        <span class="split__tag">CASE B ─ 建物が原因</span>
-        <h3>運営を尽くしても、<br>単価が上がらない</h3>
-        <ul>
-          <li>写真で「行きたい」と思わせる一枚がつくれない</li>
-          <li>定員・間取りが狙うべき客層と噛み合っていない</li>
-          <li>競合が導入した設備（サウナ・ワークスペース等）に見劣り</li>
-          <li>水回りや内装の古さがレビューで直接指摘されている</li>
-        </ul>
-        <p>→ <b>施設改善</b>が必要なケース。運営だけを頑張っても頭打ちになります。</p>
-      </div>
-    </div>
-
-    <div class="split__concl">
-      <p>運営代行会社は運営しか見ません。内装会社は建物しか見ません。<br>どちらが原因かを切り分けないまま手を打つから、稼働率が動かない。</p>
-      <b>AirStay は、<em>両方を診て、両方を直せます。</em></b>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ AirStay 施設改善 ═══════════ -->
-<section class="sec sec--tint" id="renovation">
-  <div class="inner">
-    <div class="head">
-      <span class="eyebrow">AIRSTAY 施設改善</span>
-      <h2 class="h2">運営で届かないなら、<br>建物に手を入れます。</h2>
-      <p class="lead">合同会社やどりは定款に<b>内装仕上工事業</b>を掲げる事業者です。運営代行会社が外部の内装業者を紹介するのとは違い、稼働率と単価の観点から自ら図面を引き、現場を管理します。</p>
-    </div>
-
-    <ul class="reno">
-      <li>
-        <h3>インテリア・スタイリング</h3>
-        <p>工事を伴わない範囲で、家具・照明・寝具・グリーンを入れ替えます。<b>もっとも投資が小さく、写真の見え方が最も変わる</b>打ち手です。まずここから提案することが多いです。</p>
-      </li>
-      <li>
-        <h3>内装改装工事</h3>
-        <p>壁・床・建具・水回りの意匠。古さがレビューで指摘されている箇所を、費用対効果の高い順に絞って改修します。</p>
-      </li>
-      <li>
-        <h3>間取り・定員の見直し</h3>
-        <p>狙う客層に対して定員が合っていない場合、寝室構成やベッド配置から組み替えます。単価がもっとも動くのはここです。</p>
-      </li>
-      <li>
-        <h3>差別化設備の導入</h3>
-        <p>サウナ、ワークスペース、こだわりの浴室など。競合が持っていない滞在目的そのものをつくり、価格競争から降ります。</p>
-      </li>
-      <li>
-        <h3>プロカメラマンによる撮影</h3>
-        <p>改装後は必ず撮り直します。設計意図を理解したディレクションで、1枚目で選ばれる写真をつくります。</p>
-      </li>
-      <li>
-        <h3>備品・家具の選定と調達</h3>
-        <p>写真映えと耐久性、原状回復のしやすさを両立させた選定を行います。消耗の早い備品は運用コストまで含めて判断します。</p>
-      </li>
-    </ul>
-
-    <div class="reno__scope">
-      <h3>施工の進め方と費用について</h3>
-      <dl>
-        <dt>投資回収の試算を先に出します</dt>
-        <dd>工事金額、想定されるADRの変化、回収期間を整理してからご判断いただきます。<b>回収の見込みが立たない改装はおすすめしません。</b></dd>
-      </dl>
-      <dl>
-        <dt>施工体制</dt>
-        <dd>請負代金<b>500万円未満</b>の工事は当社が請け負います。これを超える規模では、当社が設計・ディレクション・施工管理を担い、施工そのものは<b>建設業許可を持つ協力会社に発注</b>します。</dd>
-      </dl>
-      <dl>
-        <dt>費用</dt>
-        <dd>個別お見積り。物件の規模、改装範囲、工期によって変動します。診断レポートの段階で概算レンジをお示しします。</dd>
-      </dl>
-      <dl>
-        <dt>運営との連動</dt>
-        <dd>改装中の休業期間と再開後の価格戦略まで一体で設計します。工事だけ終わって稼働が戻らない、という事態を避けます。</dd>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ AirStay 開業支援 ═══════════ -->
-<section class="sec" id="startup">
-  <div class="inner">
-    <div class="head">
-      <span class="eyebrow">AIRSTAY 開業支援</span>
-      <h2 class="h2">開業したその日から、<br>稼働する状態でお渡しします。</h2>
-      <p class="lead">許可は取れたが集客が分からない、内装はできたが価格設定が分からない。開業支援と運営が分かれていると、この隙間に落ちます。AirStay は<b>申請から運営開始までを同じ窓口で</b>引き受けます。</p>
-    </div>
-
-    <ol class="stup">
-      <li>
-        <span class="stup__n">01</span>
-        <h3>物件のフィージビリティ調査</h3>
-        <p>取得・賃借の前に、<b>そもそも許可が取れる物件か</b>を精査します。用途地域、消防設備、近隣状況、フロント要件。ここで止めるべき物件は正直に止めます。</p>
-        <span class="stup__tag">物件取得前がおすすめ</span>
-      </li>
-      <li>
-        <span class="stup__n">02</span>
-        <h3>開業計画・収支計画の立案</h3>
-        <p>想定ADRと稼働率から売上を積み、初期投資・運営コスト・回収期間を組み立てます。競合ベンチマークは稼働率診断と同じ手法を使います。</p>
-        <span class="stup__tag">資金相談にそのまま使える形で</span>
-      </li>
-      <li>
-        <span class="stup__n">03</span>
-        <h3>許可申請・行政協議</h3>
-        <p>旅館業（簡易宿所）または住宅宿泊事業の申請書類作成と提出、保健所・消防との協議、立入検査の立会いまで。<b>申請の法定業務は提携行政書士に委託し、当社が窓口として全体を進行します。</b></p>
-        <span class="stup__tag">行政書士と連携</span>
-      </li>
-      <li>
-        <span class="stup__n">04</span>
-        <h3>設計・施工・初期設営</h3>
-        <p>収益を前提にした間取りと内装。家具・寝具・備品の選定と搬入、スマートロックとチェックイン動線の構築まで。施工体制は施設改善と同じ考え方です。</p>
-        <span class="stup__tag">請負500万円未満は自社施工</span>
-      </li>
-      <li>
-        <span class="stup__n">05</span>
-        <h3>リスティング作成・撮影</h3>
-        <p>開業前に撮影と掲載準備を終えます。開業初日からレビューを積み始められる状態にしておくことが、初年度の稼働率を決めます。</p>
-        <span class="stup__tag">開業日から予約を受ける</span>
-      </li>
-      <li>
-        <span class="stup__n">06</span>
-        <h3>運営代行へシームレスに接続</h3>
-        <p>そのまま AirStay 運営代行へ引き継ぎます。物件を設計段階から理解している担当がそのまま運営するため、引き継ぎのロスがありません。</p>
-        <span class="stup__tag">1棟目は初期設定費用0円（設置物品除く）</span>
-      </li>
-    </ol>
-
-    <p class="note-s">※ 許可の取得可否は物件の状況および所轄行政庁の判断によります。取得をお約束するものではありません。<br>※ 旅館業許可申請の法定業務は提携する行政書士に委託して行います。</p>
-  </div>
-</section>
-
-<!-- ═══════════ 資金 ═══════════ -->
-<section class="sec sec--tint" id="finance">
-  <div class="inner sec--mid" style="max-width:1100px;margin:0 auto">
-    <div class="head">
-      <span class="eyebrow">FINANCE</span>
-      <h2 class="h2">改装資金のご相談</h2>
-    </div>
-
-    <div class="fin">
-      <div class="fin__head">
-        <h3>資金面は、提携パートナーへおつなぎします</h3>
-        <p>施設改善に資金が必要な場合、金融面に明るい提携パートナーをご紹介します。改装計画と収支計画は当社が作成し、そのままご相談に使っていただける形でお渡しします。「何にいくら必要で、どう回収するのか」が整理された状態で臨めるぶん、話が早く進みます。</p>
-      </div>
-      <dl>
-        <dt>当社が行うこと</dt>
-        <dd>改装計画・工事概算・収支計画と投資回収シミュレーションの作成、提携パートナーへのお取り次ぎ。</dd>
-      </dl>
-      <dl>
-        <dt>当社が行わないこと</dt>
-        <dd>融資そのものの実行、資金調達の代理・媒介。金融に関する判断と手続きは、提携パートナーおよびオーナー様の間で行っていただきます。</dd>
-      </dl>
-      <p class="fin__note">※ 合同会社やどりは貸金業者・金融商品仲介業者ではありません。資金調達の可否および条件は、提携パートナーの審査によります。ご紹介は、資金調達の成立を保証するものではありません。</p>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ FAQ ═══════════ -->
-<section class="sec sec--narrow" id="faq">
+<section class="sec sec--tint sec--narrow" id="faq">
   <div class="inner" style="max-width:860px;margin:0 auto">
     <div class="head">
       <span class="eyebrow">FAQ</span>
@@ -1388,21 +1315,33 @@ table{border-collapse:collapse;width:100%}
     </div>
     <div class="faq">
       <details><summary>稼働率診断は本当に無料ですか？</summary><div><p>無料です。ヒアリングと診断レポートのご提出までで費用は発生せず、その後のご契約義務もありません。診断の結果「今のままで問題ありません」「立地の制約で伸びしろが小さい」という結論になることもあり、その場合もそのままお伝えします。他社と比較するための材料としてお使いいただいて構いません。</p></div></details>
-      <details><summary>運営代行だけ、または施設改善だけを頼むことはできますか？</summary><div><p>できます。AirStay のサービスは全部を通す必要はなく、診断の結果として必要なものだけを選んでいただく形です。運営代行のみのご依頼が最も多く、逆に「運営は自分で続けるが内装だけ相談したい」というご依頼も承っています。</p></div></details>
-      <details><summary>開業前でも相談できますか？物件をまだ持っていません。</summary><div><p>その段階が最も相談していただきたいタイミングです。AirStay 開業支援では、物件取得の前にフィージビリティ調査を行い、そもそも許可が取れる物件か、収益が見込めるかを精査します。取得後に「許可が下りない」と判明するのが宿泊事業でいちばん大きな損失なので、契約前にご相談ください。</p></div></details>
-      <details><summary>許可申請は自社で行うのですか？</summary><div><p>申請書類の作成・提出などの法定業務は、提携する行政書士に委託して行います。当社は窓口として全体の進行、保健所・消防との協議、図面や資料の整備、立入検査の立会いを担当します。許可の取得可否は物件の状況と所轄行政庁の判断によるため、取得をお約束することはできません。</p></div></details>
-      <details><summary>内装工事はどこまで自社で対応するのですか？</summary><div><p>合同会社やどりは定款に内装仕上工事業を掲げており、請負代金500万円未満の工事は当社が請け負います。これを超える規模の場合は、当社が設計・ディレクション・施工管理を担い、施工そのものは建設業許可を持つ協力会社に発注します。いずれの場合も、稼働率と単価の観点から図面を引き、現場を管理するのは当社です。</p></div></details>
-      <details><summary>改装費用の資金調達も相談できますか？</summary><div><p>金融面に明るい提携パートナーをご紹介します。改装計画・工事概算・収支計画と投資回収シミュレーションは当社が作成し、そのままご相談に使える形でお渡しします。ただし当社は貸金業者・金融商品仲介業者ではないため、融資の実行や資金調達の代理・媒介は行いません。調達の可否と条件は提携パートナーの審査によります。</p></div></details>
-      <details><summary>改装すれば必ず稼働率は上がりますか？</summary><div><p>お約束はできません。診断でお示しするのは現況データと競合比較にもとづく試算であり、実際の結果は立地・季節・市況・競合の動きによって変動します。だからこそ着手前に投資回収の試算をお出しし、回収の見込みが立たない改装はおすすめしないという方針を取っています。</p></div></details>
+      <details><summary>内装改装や開業支援もお願いできますか？</summary><div><p>現在は<b>運営代行のみのご提供</b>です。内装改装と開業支援は準備中で、時期が決まり次第あらためてご案内します。合同会社やどりは定款に内装仕上工事業を掲げており、提供を開始した際は運営と一体でお引き受けする予定です。それまでは運営面の改善に集中させていただきます。</p></div></details>
+      <details><summary>依頼すれば必ず稼働率は上がりますか？</summary><div><p>お約束はできません。診断でお示しするのは現況データと競合比較にもとづく試算であり、実際の結果は立地・季節・市況・競合の動きによって変動します。伸びしろが小さいと判断した場合は、その旨を無料診断の段階で正直にお伝えします。</p></div></details>
       <details><summary>手数料はどのタイミングで発生しますか？</summary><div><p>各予約サイトからご入金があった実績に対して、翌月にご請求します。売上が発生しない月は手数料もいただきません（最低手数料は稼働のある月に適用されます）。</p></div></details>
       <details><summary>最低手数料はどのような場合に適用されますか？</summary><div><p>算出した手数料が最低額を下回った場合に、最低額を適用します。たとえばライトプランで月商20万円の場合、料率計算では約19,400円ですが、最低額の30,000円をご請求します。月商31万円以上であれば、実質的に料率のみのご負担です。</p></div></details>
       <details><summary>清掃はどのように扱われますか？</summary><div><p>ミドル・フルプランでは、清掃とリネンの手配・スケジュール管理・品質チェック・クレーム対応を当社が請け負います。清掃そのものの費用は間取り・面積・稼働・リネン枚数から個別にお見積りし、実施分をご請求します。ライトプランでもオプションとして追加いただけます。</p></div></details>
       <details><summary>すでにAirbnbで自主運営しています。途中から引き継げますか？</summary><div><p>可能です。既存のリスティング、レビュー、スーパーホストのステータスを維持したまま運営を引き継ぎます。すでに予約が入っている分についても、そのまま対応を承ります。</p></div></details>
       <details><summary>住宅宿泊事業法（民泊新法）の物件でも依頼できますか？</summary><div><p>物件が旅館業法の簡易宿所営業か、住宅宿泊事業法の届出住宅かによって、委託できる業務の範囲や必要な登録が異なります。まずは許可・届出の種別をお知らせください。物件の状況に応じて、適法に受託できる形をご提案します。</p></div></details>
       <details><summary>1棟だけでも依頼できますか？</summary><div><p>できます。1棟目の初期設定費用は0円です（スマートロック・防犯カメラ・家具・備品等の設置物品は実費でのご負担となります）。まずは1棟でお試しいただき、成果を見てから棟数を増やされるオーナー様が多くいらっしゃいます。</p></div></details>
-      <details><summary>東京以外の物件も対応できますか？</summary><div><p>ライトプラン・ミドルプランはオンラインで完結するため全国対応が可能です（清掃は現地の提携先を開拓します）。フルプランの電話対応は全国対応、現地駆けつけは東京23区を中心に体制を構築中です。</p></div></details>
+      <details><summary>東京以外の物件も対応できますか？</summary><div><p>ライトプラン・ミドルプランはオンラインで完結するため全国対応が可能です（清掃は現地の提携先を開拓します）。フルプランの電話対応は全国対応です。現地駆けつけは東京23区を中心に体制を構築中で、現時点ではお約束できません。</p></div></details>
       <details><summary>途中でプランを変更できますか？</summary><div><p>可能です。月単位で変更いただけます。まずライトプランで始め、稼働が安定してからミドルへ移行するという進め方もおすすめしています。</p></div></details>
       <details><summary>解約に条件はありますか？</summary><div><p>最低契約期間は6ヶ月です。以降は1ヶ月前にご連絡いただければ解約でき、違約金は発生しません。リスティングとアカウントはオーナー様に帰属したまま運用します。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 今後の展開 ═══════════ -->
+<section class="sec" id="roadmap">
+  <div class="inner" style="max-width:1000px;margin:0 auto">
+    <div class="future">
+      <span class="eyebrow">ROADMAP</span>
+      <h3>今後、提供を予定しているサービス</h3>
+      <p>現在お引き受けしているのは<b>運営代行のみ</b>です。以下は準備中で、提供開始が決まり次第ご案内します。現時点ではお約束できないため、あえて詳細は載せていません。</p>
+      <ul>
+        <li><b>AirStay 施設改善</b><span>インテリア・内装改装・差別化設備の導入</span></li>
+        <li><b>AirStay 開業支援</b><span>物件調査・許可取得・設計施工・初期設営</span></li>
+        <li><b>現地駆けつけ対応</b><span>東京23区を対象に体制構築中</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1436,7 +1375,7 @@ table{border-collapse:collapse;width:100%}
     </div>
     <ul class="cta__list">
       <li>稼働率が上がらない原因を知りたい</li>
-      <li>改装すべきか判断がつかない</li>
+      <li>他社の見積もりと比べたい</li>
       <li>他社からの乗り換えを検討中</li>
       <li>物件購入前に収益を確かめたい</li>
       <li>許認可の取得から相談したい</li>
@@ -1459,9 +1398,7 @@ table{border-collapse:collapse;width:100%}
           <div>
                         <a href="#diagnosis">AirStay 稼働率診断</a>
             <a href="#plans">AirStay 運営代行</a>
-            <a href="#renovation">AirStay 施設改善</a>
-            <a href="#startup">AirStay 開業支援</a>
-            <a href="#finance">資金のご相談</a>
+            <a href="#scope">できること／できないこと</a>
           </div>
         </div>
         <div>

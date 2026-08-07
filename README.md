@@ -70,9 +70,8 @@ Air- 接頭の名称と組み合わせると出所混同のリスクが上がる
 index.html              LP本体（CSS/JSインライン、単一ファイル完結）
 CNAME                   airstay.yadori-llc.com
 .nojekyll               Jekyll処理を無効化
-favicon.png
 assets/
-  brand/airstay-*.svg   ロゴ4種（上記「ロゴ」参照）
+  brand/airstay-*.png   ロゴ5種（上記「ロゴ」参照）
   img/*.jpg             施設写真 13点
 ```
 
@@ -140,7 +139,7 @@ LP側に独自のフォームやサーバーは持っていません。
 - フォーム: `https://docs.google.com/forms/d/e/1FAIpQLScDaAVj559YMA7w5Mh1OjoHzzynQUfBV-Idlr74y2hrEewQeA/viewform`
 - メール: `yadori.2026@gmail.com`
 
-変更する場合は `index.html` 内の該当URL（9箇所）とメールアドレス（2箇所）を置換してください。
+変更する場合は `index.html` 内の該当URLとメールアドレスを置換してください。
 
 ## 内容を変更するときの主な箇所
 
@@ -151,7 +150,6 @@ LP側に独自のフォームやサーバーは持っていません。
 | OTA手数料率 | JS内 `OTA_RATE = 0.155`（FAQの試算例と分岐点も要連動） |
 | 駆けつけの提供状況 | 比較表「現地駆けつけ対応」の行、`#scope` のオプション |
 | 実績数値 | `#result` セクション |
-| 診断の内容・所要時間 | `#diagnosis` の `.diag__list` と `.diag__spec` |
 | オプションの内容 | `#scope` の `.scope__opt` |
 | やらないこと | `#scope` の `.scope__box--cant` |
 | 実績ギャラリー | `#works` の `.wgal` と `.wsum` |
